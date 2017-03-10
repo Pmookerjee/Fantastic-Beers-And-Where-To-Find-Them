@@ -22,5 +22,51 @@ function Beer(name, type, flavor, hoppy, lat, long) {
           }
         }
   });
-  
+
 }) ()
+
+var controller = {
+  type: [],
+  flavor: [],
+  hoppy: false,
+
+  getPossibleOptions: function() {
+    var options = [];
+    for(var i=0; i<beers.length; i++){
+      if(beers[i].type === this.type)
+        options.push(beers[i]);
+        for(var i=0; i<beers.length; i++){
+          if(this.flavor.indexOf(beers[i].flavor)) {
+            options.splice(i);
+          }
+        }
+    }
+
+  },
+
+  getRandomBeer: function() {
+
+  }
+}
+
+
+var type = document.getElementById('type');
+
+type.addEventListener('click', function(e) {
+  e.preventDefault();
+  (controller.type).push = e.target.id;
+})
+
+var flavor = document.getElementById('flavor');
+
+flavor.addEventListener('click', function(e) {
+  e.preventDefault();
+  (controller.flavor).push = e.target.id;
+})
+
+var hoppy = document.getElementById('hoppy');
+
+hoppy.addEventListener('click', function(e) {
+  e.preventDefault();
+  controller.hoppy = e.target.id;
+})

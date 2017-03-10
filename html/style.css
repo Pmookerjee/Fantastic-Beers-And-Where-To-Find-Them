@@ -1,0 +1,10 @@
+input {
+  display: inline;
+}
+
+.picker {
+  display: inline;
+  marign: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
