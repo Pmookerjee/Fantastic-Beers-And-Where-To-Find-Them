@@ -4,7 +4,15 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  width: auto; 
+  width: auto;
   height: auto;
   z-index: -100;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  background-attachment: fixed;
+  background-size: cover;
 }
