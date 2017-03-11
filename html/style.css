@@ -1,4 +1,9 @@
 
+h1 {
+  font-family: 'Suez One', serif;
+  font-color: #AA6C39;
+}
+
 #video-background {
   position: fixed;
   right: 0;
@@ -16,3 +21,4 @@ body {
   background: #333;
   background-attachment: fixed;
   background-size: cover;
+}
