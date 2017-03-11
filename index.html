@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <link href="style.css" rel="stylesheet" type='text/css'>
+  <link href="html/style.css" rel="stylesheet" type='text/css'>
   <head>
     <body>
       <h1>Fantastic Beers And Where To Find Them</h1>
@@ -11,7 +11,7 @@
           <form id='type'>
             <p>Select a type</p>
             <br>
-            <select name="type" size="5" multiple="multiple">
+            <select id="type" name="type" size="5" multiple="multiple" required>
               <option id="ale" value="ale">Pale Ale</option>
               <option id="ipa" value="ipa">IPA</option>
               <option id="stout" value="stout">Stout</option>
@@ -24,30 +24,32 @@
           <form id='flavor'>
             <p>Select a flavor</p>
             <br>
-            <select name="flavor" size="6" multiple="multiple">
-              <option id="banana" value="banana">Banana/Cardomom</option>
-              <option id="banana" value="coffee">Coffee</option>
-              <option id="chocolate" value="chocolate">Chocolate</option>
-              <option id="pumpkin" value="pumpkin">Pumpkin</option>
-              <option id="citrus" value="citrus">Citrus</option>
-              <option id="berry" value="berry">Berry</option>
-            </select>
-          </form>
-        </fieldset>
-        <fieldset>
-          <form id='hoppy'>
-            <p>Hoppy?</p>
-            <br>
-            <select name="hoppy" size="2">
-              <option id="yes" value="yes">Yes</option>
-              <option id="no" value="no">No</option>
-            </select>
-          </form>
-        </fieldset>
-        <button type="submit" name="submit">Get Yo Beer</button>
-      </section>
-      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-      <script type="text/javascript" src="app.js"></script>
+            <ul>
+              <select name="flavor" size="6" multiple="multiple" required>
 
-    </body>
-    </html>
+                <li><option id="banana" value="banana">Banana/Cardomom</option></li>
+                <option id="coffee" value="coffee">Coffee</option>
+                <option id="chocolate" value="chocolate">Chocolate</option>
+                <option id="pumpkin" value="pumpkin">Pumpkin</option>
+                <option id="citrus" value="citrus">Citrus</option>
+                <option id="berry" value="berry">Berry</option>
+              </select>
+            </form>
+          </fieldset>
+          <fieldset>
+            <form id='hoppy'>
+              <p>Hoppy?</p>
+              <br>
+              <select name="hoppy" size="2" required>
+                <option id="yes" value="yes">Yes</option>
+                <option id="no" value="no">No</option>
+              </select>
+            </form>
+          </fieldset>
+          <input type="submit" value="Get Yo Beer" id="submit">
+        </section>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+
+      </body>
+      </html>
