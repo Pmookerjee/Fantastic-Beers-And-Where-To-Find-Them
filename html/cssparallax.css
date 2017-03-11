@@ -20,18 +20,50 @@
 .content {
     background: none repeat scroll 0 0 black;
     padding: 42px 0;
+}
+
+.fbwft-parallaxvideo{
+	height: 300px;
+	padding-bottom: 50px;
+    padding-top: 50px;
+}
+.fbwft-parallaxvideo video{
+    min-width: 100%;
+    position: fixed;
+	top:0;
+	z-index: -100;
 
 }
 
+.fbwft-parallaxvideo h1 {
+    color: #fff;
+    font-size: 76px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
 
 h2{
-	color:#FFF;
+  color: #fff;
+  font-family: "PT Sans",sans-serif;
+  font-size: 32px;
+  margin: 0;
+text-align: center;
 }
 
 h1{
-color:#FFF;
+  font-family: "PT Sans",sans-serif;
+  font-weight: 700;
+  font-size: 76px;
+  text-align: center;
+  text-transform: uppercase;
+  color:#FFF;
 }
 
 p{
-color:#FFF;
+  font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+	color:#f6f3f3;
+	text-align: center;
 }
