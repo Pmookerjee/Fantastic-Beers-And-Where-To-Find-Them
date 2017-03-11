@@ -13,6 +13,26 @@
   padding-top: 50px;
 }
 
+.parallaxTwo {
+  background-image: url("IndexImages/beerflight.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.parallaxThree {
+  background-image: url("IndexImages/beertanks.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
 .plax:last-child {
   margin-bottom: 0;
 }
