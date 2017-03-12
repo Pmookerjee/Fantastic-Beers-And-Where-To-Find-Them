@@ -1,0 +1,120 @@
+html{
+  text-align: center;
+  background-color: ivory;
+  display: block;
+  border: 15px solid black;
+}
+
+h1{
+  font-family: fantasy, impact;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 70px;
+}
+
+p{
+  text-decoration-style: solid;
+  text-align: center;
+}
+
+body{
+  text-align: center;
+  position: relative;
+  width: 100%;
+
+}
+
+head{
+  text-align: center;
+}
+
+legend{
+  text-align: center;
+  text-decoration-style: solid;
+}
+
+table{
+  text-align: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: flex-start;
+}
+
+tr{
+  text-align: center;
+  left: auto;
+}
+form{
+  align-items: center;
+}
+
+a{
+  text-align: center;
+  font-style: bold;
+  color: black;
+  text-decoration: none;
+}
+
+label{
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: lighter;
+  }
+
+input, label {
+    float: none;
+}
+
+
+fieldset {
+  background-position: center;
+  width: 950px;
+  margin: 0 auto;
+}
+
+ul{
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+
+}
+
+#link-bar{
+  padding: .5em;
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  right: 0;
+  top: 0%;
+  background-color: white;
+  color: black;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: ivory;
+}
+
+#map{
+  max-width: 80%;
+  max-height: 80%;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer{
+  text-align: center;
+  text-decoration-style: solid;
+}
+
+/*
+div id= "two"{
+max-width: 0;
+max-height: 0;
+text-align: center;
+}*/
