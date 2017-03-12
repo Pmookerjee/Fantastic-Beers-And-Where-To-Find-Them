@@ -1,0 +1,101 @@
+<!--final proj-->
+<!DOCTYPE html>
+<html>
+
+<div id="two">
+  <head>
+    <h1>G O O G L E _ M A P _ D E M O</h1>
+    <meta charset="utf-8">
+    <link href="map.css" rel="stylesheet"/>
+    <link href= "http://www.webpage.com"/>
+    <link src= "../app.js">
+  </head>
+
+  <br>
+  <body>
+    <fieldset>
+      <br>
+      <br>
+      <legend>
+        L O C A T I O N
+      </legend>
+
+      <form>
+        <table width= "500" cellpadding= "10" cellspacing= "5">
+          <tr>
+            <label><a href="">L O C A T I O N &nbsp; 1</a></label>
+            <br>
+            <label><a href="">L O C A T I O N &nbsp; 2</a></label>
+            <br>
+            <label><a href="">L O C A T I O N &nbsp; 3</a></label>
+            <br>
+            <label><a href="">L O C A T I O N &nbsp; 4</a></label>
+            <br>
+            <label><a href="">L O C A T I O N &nbsp; 5</a></label>
+            <br>
+            <label><a href="">L O C A T I O N &nbsp; 6</a></label>
+          </tr>
+        </table>
+      </form>
+      <br>
+      <p>- P L E A S E &nbsp; C L I C K &nbsp; A B O V E &nbsp; F O R &nbsp; D I R E C T I O N S -</p>
+
+    </fieldset>
+  </div id="two">
+  <br>
+  <br>
+  <br>
+
+  <div id= "map"></div>
+
+  <br>
+  <br>
+  <br>
+
+  <fieldset>
+  <style>
+  #map{
+    width: 100%;
+    height: 600px;
+    background-color: grey;
+  }
+  </style>
+
+  <script>
+  function initMap(){
+    var uluru= {lat: 47.608013, lng: -122.335167};
+    var map= new google.maps.Map(document.getElementById('map'),{
+      zoom: 4,
+      center: uluru
+    });
+    var maker= new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+  </script>
+
+  <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap">
+  </script>
+  <p><a href= "http://www.thebeerstore.ca/beer-101" target= "_black">- &nbsp; W H A T &nbsp; I S &nbsp; B E E R ? &nbsp; -</a></p>
+</fieldset>
+
+<section id= "link-bar">
+  <a href= "https://www.facebook.com/brian.namgung" target= "blank"</a>
+    <img class= "link-bar" src= "images\fb.png" alt= ""></a>
+    <a href= "https://twitter.com/namgungssi" target="blank"</a>
+      <img class= "link-bar" src= "images\twitter.png" alt=""></a>
+      <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"</a>
+        <img class= "link-bar" src= "images\instagram.png" alt=""></a>
+      </section>
+
+      <br>
+      <br>
+      <footer>C O D E &nbsp; 2 0 1 &nbsp; F I N A L &nbsp; P R O J E C T</footer>
+      <br>
+      <footer>B R I A N &nbsp; N A M G U N G</footer>
+      <br>
+      <br>
+
+    </body>
+    </html>
