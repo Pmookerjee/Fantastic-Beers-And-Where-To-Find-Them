@@ -8,6 +8,8 @@
       "cardomom"
     ],
     "hoppy": false,
+    "store": "Some Store - CHANGE ME",
+    "address": "Some ADDRESS - CHANGE ME",
     "lat": 21.1200499,
     "long": 41.354
   },
@@ -19,6 +21,8 @@
       "chocolate"
     ],
     "hoppy": false,
+    "store": "Some Store - CHANGE ME",
+    "address": "Some ADDRESS - CHANGE ME",
     "lat": 21.1200499,
     "long": 41.354
   }
