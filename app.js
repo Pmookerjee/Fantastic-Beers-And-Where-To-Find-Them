@@ -8,6 +8,8 @@ function Beer(name, type, flavor, hoppy, lat, long) {
   this.type = type;
   this.flavor = flavor;
   this.hoppy = hoppy;
+  this.store = store;
+  this.address = address;
   this.lat = lat;
   this.long = long;
 }
@@ -20,7 +22,7 @@ function Beer(name, type, flavor, hoppy, lat, long) {
     dataType: 'json',
     success: function(data) {
       for(var x in data) {
-        beers[x] = new Beer(data[x].name, data[x].type, data[x].flavor, data[x].hoppy, data[x].lat, data[x].long);
+        beers[x] = new Beer(data[x].name, data[x].type, data[x].flavor, data[x].hoppy, data[x].store, data[x].address, data[x].lat, data[x].long);
       }
     }
   });
