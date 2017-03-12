@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Fantastic Beers and Where to Find Them</title>
@@ -44,47 +44,42 @@
               <div class="container">
                 <div class="contentarea">
                   <h2>SLOT MACHINE</h2>
-                  <section class='picker'>
+                  <section class="picker">
                     <fieldset>
-                      <form id='type'>
+                      <form id="type">
                         <p>Select a type</p>
                         <br>
-                        <select id="type" name="type" size="5" multiple="multiple" required>
-                          <option id="ale" value="ale">Pale Ale</option>
-                          <option id="ipa" value="ipa">IPA</option>
-                          <option id="stout" value="stout">Stout</option>
-                          <option id="belgian" value="belgian">Belgian</option>
-                          <option id="sour" value="sour">Sour</option>
-                        </select>
+                        <input type="radio" name="type" value="ale" required>Pale Ale</input>
+                        <input type="radio" name="type" value="ipa" required>IPA</input>
+                        <input type="radio" name="type" value="stout" required>Stout</input>
+                        <input type="radio" name="type" value="belgian" required>Belgian</input>
+                        <input type="radio" name="type" value="sour" required>Sour</input>
                       </form>
                     </fieldset>
                     <fieldset>
-                      <form id='flavor'>
+                      <form id="flavor">
                         <p>Select a flavor</p>
                         <br>
-                        <ul>
-                          <select name="flavor" size="6" multiple="multiple" required>
-
-                            <li><option id="banana" value="banana">Banana/Cardomom</option></li>
-                            <option id="coffee" value="coffee">Coffee</option>
-                            <option id="chocolate" value="chocolate">Chocolate</option>
-                            <option id="pumpkin" value="pumpkin">Pumpkin</option>
-                            <option id="citrus" value="citrus">Citrus</option>
-                            <option id="berry" value="berry">Berry</option>
-                          </select>
+                          <input type="radio" name="flavor" value="banana_cardomom" required>Banana/Cardomom</input>
+                          <input type="radio" name="flavor" value="coffee" required>Coffee</input>
+                          <input type="radio" name="flavor" value="chocolate" required>Chocolate</input>
+                          <input type="radio" name="flavor" value="pumpkin" required>Pumpkin</input>
+                          <input type="radio" name="flavor" value="citrus" required>Citrus</input>
+                          <input type="radio" name="flavor" value="berry" required>Berry</input>
                         </form>
                       </fieldset>
                       <fieldset>
-                        <form id='hoppy'>
+                        <form id="hoppy">
                           <p>Hoppy?</p>
                           <br>
-                          <select name="hoppy" size="2" required>
-                            <option id="yes" value="yes">Yes</option>
-                            <option id="no" value="no">No</option>
-                          </select>
+                          <input type="radio" name="hoppy" value="no" required>No</input>
+                          <input type="radio" name="hoppy" value="yes" required>Yes</input>
                         </form>
                       </fieldset>
-                      <input type="submit" value="Get Yo Beer" id="submit">
+                      <input type="submit" name="submit" value="Get Yo Beer" id="submit">
+                      <div>
+                        <img src="" id="result">
+                      </div>
                     </section>
                   </div>
                 </div>

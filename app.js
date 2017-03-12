@@ -2,7 +2,7 @@
 
 var beers = [];
 
-function Beer(name, type, flavor, hoppy, lat, long) {
+function Beer(name, type, flavor, hoppy, store, address, lat, long) {
   this.name = name;
   this.img = name + '.jpg';
   this.type = type;
@@ -30,48 +30,58 @@ function Beer(name, type, flavor, hoppy, lat, long) {
 }) ()
 
 var controller = {
-  type: [],
-  flavor: [],
-  hoppy: false,
+  userType:'',
+  userFlavor: '',
+  userHoppy: '',
+  options: [],
+  chosenBeer: {},
 
   helper: function() {
     var options = this.getPossibleOptions();
+    this.getRandomBeer(options);
+    this.drawRandomBeer;
   },
 
   getPossibleOptions: function() {
-    var options = [];
+    //  debugger;
+     var option_length = 0;
     for(var i=0; i<beers.length; i++){
-      if(this.hoppy === beers[i].hoppy){
-        options.push(beers[i]);
-        for(var i=0; i<beers.length; i++){
-          if(this.type.indexOf(beers[i].type) != -1){
-            options.splice(beers[i]);
-          }
-          for(var i=0; i<beers.length; i++){
-            if(this.flavor.indexOf(beers[i].flavor)) {
-              options.splice(beers[i]);
-            }
-          }
-        }
+      if(this.userHoppy === beers[i].hoppy){
+        this.options.push(beers[i]);
+        option_length = this.options.length;
       }
     }
-    return options;
+    for(var i=0; i<this.options.length; i++){
+      if(this.userType !== this.options[i].type){
+        this.options.splice(options[i]);
+      }
+    }
+    for(var i=0; i<beers.length; i++){
+      if(this.userFlavor !== this.options[i].flavor) {
+        this.options.splice(options[i]);
+      }
+    }
+    return this.options;
   },
 
-  getRandomBeer: function() {
-
+  getRandomBeer: function(opts) {
+    var i = Math.floor(Math.random() * opts.length)
+    this.chosenBeer = opts[i];
   },
 
-  drawRandomBeer: function(){}
+  drawRandomBeer: function(){
+    console.log('Your beer is ' + chosenBeer.name);
+  }
 }
 
 var type = document.getElementById('type');
 
 type.addEventListener('click', function(e) {
   e.preventDefault();
-  if(e.target.selected){
-    (controller.type).push(e.target.id)
-  }  else { (controller.type).splice(e.target.id, 1); }
+  controller.userType = e.target.id;
+  // if(e.target.selected){
+  //   (controller.userType).push(e.target.id)
+  // }  else { (controller.userType).splice(e.target.id, 1); }
 
 })
 
@@ -79,24 +89,28 @@ var flavor = document.getElementById('flavor');
 
 flavor.addEventListener('click', function(e) {
   e.preventDefault();
-  if(e.target.selected){
-    (controller.flavor).push(e.target.id)
-  }  else { (controller.flavor).splice(e.target.id, 1); }
+  controller.userFlavor = e.target.id;
+  // if(e.target.selected){
+  //   (controller.userFlavor).push(e.target.id)
+  // }  else { (controller.userFlavor).splice(e.target.id, 1); }
 })
 
 var hoppy = document.getElementById('hoppy');
 
 hoppy.addEventListener('click', function(e) {
   e.preventDefault();
-  controller.hoppy = e.target.id;
+  controller.userHoppy = e.target.id;
 })
 
-var submit = document.getElementById('submit');
+// if(controller.userHoppy && controller.userType && controller.userHoppy) {
+  var submit = document.getElementById('submit');
+  console.log("You are now in the submit event handler")
 
-submit.addEventListener('click', function(e){
-  e.preventDefault()
-  type.removeEventListener('click', function(){});
-  flavor.removeEventListener('click', function(){});
-  hoppy.removeEventListener('click', function(){});
-  controller.helper();
-})
+  submit.addEventListener('click', function(e){
+    e.preventDefault();
+    controller.helper();
+    type.removeEventListener('click', function(){});
+    flavor.removeEventListener('click', function(){});
+    hoppy.removeEventListener('click', function(){});
+  })
+// }
