@@ -39,6 +39,10 @@ form {
   flex-direction: column;
 }
 
+input {
+  font: fantasy;
+}
+
 .submit_button {
   margin: 0 auto;
   width: 20%;
@@ -49,15 +53,27 @@ form {
   display: flex;
   justify-content: center;
   list-style: none;
+  flex-direction: column;
 }
 
-#type_slot {
+.slot_title {
+  color: black;
+  font-size: 40;
+  font-weight: bolder;
+  font-family: fantasy;
+  padding: 1em 1em 1em 0;
+}
+
+.slot_styling {
   color: black;
   font-size: 40;
   font-weight: bold;
   font-family: fantasy;
-  padding: 6em 2em 5em 1em;
+  padding: 1em 1em 1em 0;
+}
 
+.slot_icons {
+  padding-right: 4em;
 }
 
 input {
@@ -71,5 +87,4 @@ input {
 
 fieldset {
   background-color: grey;
-  border-radius: 10px;
 }
