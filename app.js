@@ -35,6 +35,24 @@ var controller = {
   userHoppy: '',
   chosenBeer: {},
 
+  drawBeerType: function() {
+
+    var type = document.getElementById('type');
+    var parent = type.parentNode;
+    parent.removeChild(type);
+    var newUl = document.createElement('ul')
+    newUl.setAttribute('id', 'newUl');
+    parent.appendChild(newUl);
+    var newLi = document.createElement('li');
+    newLi.setAttribute('id', 'type_slot');
+    var content = (this.userType).toUpperCase();
+    var newTextNode = document.createTextNode(content);
+    newLi.appendChild(newTextNode);
+    newUl.appendChild(newLi);
+    document.getElementById('slot1').style.backgroundColor = "red";
+
+  },
+
   helper: function() {
     var options = this.getPossibleOptions();
     this.getRandomBeer(options);
@@ -79,6 +97,7 @@ var type = document.getElementById('type');
 
 type.addEventListener('click', function(e) {
   controller.userType = e.target.value;
+  controller.drawBeerType();
   // if(e.target.selected){
   //   (controller.userType).push(e.target.id)
   // }  else { (controller.userType).splice(e.target.id, 1); }
@@ -101,9 +120,7 @@ hoppy.addEventListener('click', function(e) {
 })
 
 
-// if(controller.userHoppy && controller.userType && controller.userFlavor) {
   var submit = document.getElementById('submit');
-  console.log("You are now in the submit event handler")
 
   submit.addEventListener('click', function(e){
     e.preventDefault();
@@ -112,4 +129,3 @@ hoppy.addEventListener('click', function(e) {
     flavor.removeEventListener('click', function(){});
     hoppy.removeEventListener('click', function(){});
   })
-// }

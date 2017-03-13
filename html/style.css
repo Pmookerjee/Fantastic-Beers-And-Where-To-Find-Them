@@ -23,14 +23,53 @@ body {
   background-size: cover;
 }
 
+/*input {
+  color: white;
+}*/
+
+.slot_machine {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.submit_button {
+  margin: 0 auto;
+  width: 20%;
+  padding-top: .7em;
+}
+
+#newUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#type_slot {
+  color: black;
+  font-size: 40;
+  font-weight: bold;
+  font-family: fantasy;
+  padding: 6em 2em 5em 1em;
+
+}
+
 input {
+  border-radius: 5px;
+}
+
+ p {
   color: white;
 }
 
-p {
-  color: white;
-}
 
 fieldset {
   background-color: grey;
+  border-radius: 10px;
 }
