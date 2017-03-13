@@ -33,35 +33,36 @@ var controller = {
   userType:'',
   userFlavor: '',
   userHoppy: '',
-  options: [],
   chosenBeer: {},
 
   helper: function() {
     var options = this.getPossibleOptions();
     this.getRandomBeer(options);
-    this.drawRandomBeer;
+    this.drawRandomBeer();
   },
 
   getPossibleOptions: function() {
-    //  debugger;
-     var option_length = 0;
+
+     var optionsRound1 = [], optionsRound2 = [], optionsRound3 = [];
+
     for(var i=0; i<beers.length; i++){
       if(this.userHoppy === beers[i].hoppy){
-        this.options.push(beers[i]);
-        option_length = this.options.length;
+        optionsRound1.push(beers[i]);
       }
     }
-    for(var i=0; i<this.options.length; i++){
-      if(this.userType !== this.options[i].type){
-        this.options.splice(options[i]);
+
+    for(var i=0; i<optionsRound1.length; i++){
+      if(this.userType === optionsRound1[i].type){
+        optionsRound2.push(optionsRound1[i]);
       }
     }
-    for(var i=0; i<beers.length; i++){
-      if(this.userFlavor !== this.options[i].flavor) {
-        this.options.splice(options[i]);
+
+    for(var i=0; i<optionsRound2.length; i++){
+      if(this.userFlavor === optionsRound2[i].flavor) {
+        optionsRound3.push(optionsRound2[i]);
       }
     }
-    return this.options;
+    return optionsRound3;
   },
 
   getRandomBeer: function(opts) {
@@ -70,15 +71,14 @@ var controller = {
   },
 
   drawRandomBeer: function(){
-    console.log('Your beer is ' + chosenBeer.name);
+    console.log('Your beer is ' + this.chosenBeer.name);
   }
 }
 
 var type = document.getElementById('type');
 
 type.addEventListener('click', function(e) {
-  e.preventDefault();
-  controller.userType = e.target.id;
+  controller.userType = e.target.value;
   // if(e.target.selected){
   //   (controller.userType).push(e.target.id)
   // }  else { (controller.userType).splice(e.target.id, 1); }
@@ -88,8 +88,7 @@ type.addEventListener('click', function(e) {
 var flavor = document.getElementById('flavor');
 
 flavor.addEventListener('click', function(e) {
-  e.preventDefault();
-  controller.userFlavor = e.target.id;
+  controller.userFlavor = e.target.value;
   // if(e.target.selected){
   //   (controller.userFlavor).push(e.target.id)
   // }  else { (controller.userFlavor).splice(e.target.id, 1); }
@@ -98,11 +97,11 @@ flavor.addEventListener('click', function(e) {
 var hoppy = document.getElementById('hoppy');
 
 hoppy.addEventListener('click', function(e) {
-  e.preventDefault();
-  controller.userHoppy = e.target.id;
+  controller.userHoppy = e.target.value;
 })
 
-// if(controller.userHoppy && controller.userType && controller.userHoppy) {
+
+// if(controller.userHoppy && controller.userType && controller.userFlavor) {
   var submit = document.getElementById('submit');
   console.log("You are now in the submit event handler")
 
