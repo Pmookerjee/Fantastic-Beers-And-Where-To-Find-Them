@@ -3,11 +3,8 @@
   {
     "name": "Fin du Monde",
     "type": "belgian",
-    "flavor": [
-      "banana",
-      "cardomom"
-    ],
-    "hoppy": false,
+    "flavor":"banana",
+    "hoppy": "no",
     "store": "Some Store - CHANGE ME",
     "address": "Some ADDRESS - CHANGE ME",
     "lat": 21.1200499,
@@ -17,13 +14,48 @@
   {
     "name": "Rogue Double Chocolate Stout",
     "type": "stout",
-    "flavor": [
-      "chocolate"
-    ],
-    "hoppy": false,
+    "flavor": "chocolate",
+    "hoppy": "no",
     "store": "Some Store - CHANGE ME",
     "address": "Some ADDRESS - CHANGE ME",
     "lat": 21.1200499,
     "long": 41.354
+  },
+
+  {
+    "name": "Punkuccino",
+    "type": "ale",
+    "flavor": "coffee",
+    "hoppy": "no",
+    "store": "Elysian Brewing Public House",
+    "address": "1221 E Pike St, Seattle, WA 98122",
+    "lat": 47.6139394,
+    "long": -122.3180826
+  },
+
+  {
+    "name": "Punkuccino",
+    "type": "ale",
+    "flavor": "pumpkin",
+    "hoppy": "no",
+    "store": "Elysian Brewing Public House",
+    "address": "1221 E Pike St, Seattle, WA 98122",
+    "lat": 47.6139394,
+    "long": -122.3180826
+  },
+
+  {
+    "name": "Raspberry Sour - Avery Brewing",
+    "type": "sour",
+    "flavor": "berry",
+    "hoppy": "no",
+    "store": "Chuck's Hop Shop",
+    "address": "2001 E Union St, Seattle, WA 98122",
+    "lat": 47.612718,
+    "long": -122.3079137
   }
+
+
+
+
 ]
