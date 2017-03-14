@@ -22,3 +22,73 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+/*input {
+  color: white;
+}*/
+
+.slot_machine {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+input {
+  font: fantasy;
+}
+
+.submit_button {
+  margin: 0 auto;
+  width: 20%;
+  padding-top: .7em;
+}
+
+#newUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+.slot_title {
+  color: black;
+  font-size: 40;
+  font-weight: bolder;
+  font-family: fantasy;
+  padding: 1em 1em 1em 0;
+}
+
+.slot_styling {
+  color: black;
+  font-size: 40;
+  font-weight: bold;
+  font-family: fantasy;
+  padding: 1em 1em 1em 0;
+}
+
+.img_slot_styling {
+ padding: 1em 1em 1em 0;
+ display: flex;
+ justify-content: center;
+}
+
+input {
+  border-radius: 5px;
+}
+
+ p {
+  color: white;
+}
+
+
+fieldset {
+  background-color: grey;
+}
+
+/* Animation css*/
