@@ -72,8 +72,10 @@ input {
   padding: 1em 1em 1em 0;
 }
 
-.slot_icons {
-  padding-right: 4em;
+.img_slot_styling {
+ padding: 1em 1em 1em 0;
+ display: flex;
+ justify-content: center;
 }
 
 input {
@@ -88,3 +90,5 @@ input {
 fieldset {
   background-color: grey;
 }
+
+/* Animation css*/

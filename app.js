@@ -30,7 +30,8 @@ function Beer(name, type, flavor, hoppy, store, address, lat, long) {
 }) ()
 
 var controller = {
-  userType: ['', '../pale.png'],
+  userType: '',
+  userTypePic: '',
   userFlavor: '',
   userHoppy: '',
   chosenBeer: {},
@@ -42,19 +43,20 @@ var controller = {
     parent.removeChild(type);
     var newUl = document.createElement('ul')
     newUl.setAttribute('id', 'newUl');
+    newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
     var titleLi = document.createElement('li');
     titleLi.setAttribute('class', 'slot_title');
     titleLi.innerHTML = 'BEER';
     var newLi = document.createElement('li');
     newLi.setAttribute('class', 'slot_styling');
-    var content = (this.userType[0]).toUpperCase();
+    var content = (this.userType).toUpperCase();
     var newTextNode = document.createTextNode(content);
 
     var newLi2 = document.createElement('li');
     var imgLi = document.createElement('img');
     imgLi.setAttribute('class', 'slot_styling');
-    var imgSrc = this.userType[1];
+    var imgSrc = this.userTypePic;
     imgLi.src = imgSrc;
     newLi2.appendChild(imgLi);
     newLi.appendChild(newTextNode);
@@ -71,6 +73,7 @@ var controller = {
     parent.removeChild(flavor);
     var newUl = document.createElement('ul')
     newUl.setAttribute('id', 'newUl');
+    newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
     var titleLi = document.createElement('li');
     titleLi.setAttribute('class', 'slot_title');
@@ -92,6 +95,7 @@ var controller = {
       parent.removeChild(hoppy);
       var newUl = document.createElement('ul')
       newUl.setAttribute('id', 'newUl');
+      newUl.setAttribute('class', 'slot');
       parent.appendChild(newUl);
       var titleLi = document.createElement('li');
       titleLi.setAttribute('class', 'slot_title');
@@ -149,7 +153,8 @@ var controller = {
 var type = document.getElementById('type');
 
 type.addEventListener('click', function(e) {
-  controller.userType[0] = e.target.value;
+  controller.userType = e.target.value;
+  controller.userTypePic = 'assets/' + controller.userType + '.png';
   controller.drawBeerType();
 })
 

@@ -44,7 +44,7 @@
               <div class="container">
                 <div class="contentarea">
                   <h2>SLOT MACHINE</h2>
-                  <section class="slot_machine">
+                  <section class="slot_machine fancy">
                     <fieldset id="slot1">
                       <form id="type">
                         <p>Select a type</p>
@@ -60,7 +60,7 @@
                       <form id="flavor">
                         <p>Select a flavor</p>
                         <br>
-                        <input type="radio" name="flavor" value="banana_cardomom" required>Banana/Cardomom</input>
+                        <input type="radio" name="flavor" value="banana" required>Banana</input>
                         <input type="radio" name="flavor" value="coffee" required>Coffee</input>
                         <input type="radio" name="flavor" value="chocolate" required>Chocolate</input>
                         <input type="radio" name="flavor" value="pumpkin" required>Pumpkin</input>
@@ -80,8 +80,10 @@
                   <fieldset class="submit_button">
                     <form>
                       <input type="submit" name="submit" value="Get Yo Beer" id="submit">
+                      <input type="button" id="playBtn" value="play">
                     </form>
                   </fieldset>
+
                   <div>
                     <img src="" id="result">
                   </div>
@@ -89,6 +91,7 @@
                 </div>
               </div>
             </div>
+
             <!-- END CONTAINER TWO -->
             <!-- CONTAINER THREE -->
             <div class="parallaxTwo">
@@ -126,7 +129,18 @@
       </div>
     </div>
   </div>
+
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery.jSlots.js" charset="utf-8"></script>
+  <script src="jquery.easing.1.3.js" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+
+    $('.slot').jSlots({
+        spinner : '#playBtn',
+        winnerNumber : 7
+    });
+
+</script>
   <script type="text/javascript" src="app.js"></script>
   <!-- <video autoplay loop id="video-background" muted>
   <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
