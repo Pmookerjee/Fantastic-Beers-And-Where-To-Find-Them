@@ -56,6 +56,7 @@ var controller = {
     // var newTextNode = document.createTextNode(content);
 
     var newLi2 = document.createElement('li');
+    newLi2.setAttribute('id', 'typeLi');
     var imgLi = document.createElement('img');
     imgLi.setAttribute('class', 'img_slot_styling');
     var imgSrc = this.userTypePic;
@@ -133,7 +134,8 @@ var controller = {
   helper: function() {
     var options = this.getPossibleOptions();
     this.getRandomBeer(options);
-    this.drawRandomBeer();
+    // this.drawRandomBeer();
+    this.slotAnimation();
   },
 
   getPossibleOptions: function() {
@@ -167,8 +169,49 @@ var controller = {
 
   drawRandomBeer: function(){
     console.log('Your beer is ' + this.chosenBeer.name);
+  },
+
+  slotAnimation: function() {
+    var newUl = document.createElement('Ul');
+    var newLi = document.getElementById('typeLi');
+    var slot1_p = document.getElementById('slot1');
+    slot1_p.setAttribute('class', 'swing');
+    newLi.setAttribute('class', 'swing');
+    // var parent = newLi.parentNode;
+    // parent.removeChild(newLi);
+
+      setTimeout( function() {
+
+      newLi.innerHTML = '<img src= "assets/pitcher.jpeg">';
+      newLi.classList.remove('swing');
+      newUl.appendChild('newLi');
+      // newLi.classList.add('show');
+
+      }, 2000)
+
+
+
+
+
+
+
+    // var newLi = document.createElement('li');
+    // var imgLi = document.createElement('img');
+    // imgLi.setAttribute('class', 'img_slot_styling');
+    // imgLi.src = 'assets/pitcher.jpeg';
+    // newLi.appendChild(imgLi);
+    // newUl.appendChild(newLi);
+    // var newLi2 = document.createElement('li');
+    // var imgLi = document.createElement('img');
+    // imgLi.setAttribute('class', 'img_slot_styling');
+    // imgLi.src = 'assets/pitcher.jpeg';
+    // newLi2.appendChild(imgLi);
+    // newLi2.setAttribute('class', 'show');
+    // newUl.appendChild(newLi2);
   }
 }
+
+
 
 var type = document.getElementById('type');
 

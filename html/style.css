@@ -152,11 +152,6 @@ fieldset {
   padding-top: 2.5em;
 }
 
-.swing li {
-  opacity: 0;
-  transform: rotateY(-90deg);
-  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
 
 #beer_button {
     background: url("../assets/button.png") no-repeat;
@@ -171,4 +166,45 @@ fieldset {
 #beer_button:active{
    width: 200px;
 }
+
+.swing li {
+  opacity: 0;
+  transform: rotateY(-deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show {
+  opacity: 1;
+  transform: none
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+li .show{
+  opacity: 1;
+  transform: none;
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show li{
+opacity: 1;
+transform: none
+transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+
+
+.swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+
+
+/*.show img {
+  opacity: 1;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}*/
+
 /* Animation css*/
