@@ -175,7 +175,9 @@ var controller = {
     var newUl = document.getElementById('newTypeUl');
     // var newUl = document.createElement('Ul');
     var newLi = document.getElementById('typeLi');
-    var slot1_p = document.getElementById('slot1');
+    var slot1_p = document.getElementById('p_type');
+
+
     slot1_p.setAttribute('class', 'swing');
     newLi.setAttribute('class', 'swing');
     // var parent = newLi.parentNode;
@@ -183,12 +185,12 @@ var controller = {
 
       setTimeout( function() {
 
-      newLi.innerHTML = '<img width="188px" height="229px" src= "assets/pumpkin.png">';
+      newLi.innerHTML = '<img width="188px" height="229px" src= "assets/pitcher.jpg">';
       // newLi.classList.remove('swing');
       // newUl.appendChild('newLi');
       newLi.classList.add('show');
 
-      }, 2000)
+    }, 1500)
 
 
 

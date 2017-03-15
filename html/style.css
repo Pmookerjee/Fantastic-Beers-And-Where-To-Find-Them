@@ -174,18 +174,36 @@ fieldset {
    width: 200px;
 }
 
-.swing li {
+/*.swing li {
   opacity: 0;
   transform: rotateY(-90deg);
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 
-.swing li.show {
-  opacity: 1;
-  transform: none;
+li .swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-  width: 188px;
+}*/
+
+.swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
+
+.show {
+  opacity: 1;
+  transform: rotateY(-180deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+/*p.swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}*/
+
 
 /*.show {
   opacity: 1;
@@ -207,11 +225,6 @@ transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 
 
 
-.swing {
-  opacity: 0;
-  transform: rotateY(-90deg);
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}*/
 
 
 
