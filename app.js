@@ -33,7 +33,9 @@ var controller = {
   userType: '',
   userTypePic: '',
   userFlavor: '',
+  userFlavorPic: '',
   userHoppy: '',
+  userHoppyPic: '',
   chosenBeer: {},
 
   drawBeerType: function() {
@@ -45,25 +47,25 @@ var controller = {
     newUl.setAttribute('id', 'newUl');
     newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
-    var titleLi = document.createElement('li');
-    titleLi.setAttribute('class', 'slot_title');
-    titleLi.innerHTML = 'BEER';
-    var newLi = document.createElement('li');
-    newLi.setAttribute('class', 'slot_styling');
-    var content = (this.userType).toUpperCase();
-    var newTextNode = document.createTextNode(content);
+    // var titleLi = document.createElement('li');
+    // titleLi.setAttribute('class', 'slot_title');
+    // titleLi.innerHTML = 'TYPE';
+    // var newLi = document.createElement('li');
+    // newLi.setAttribute('class', 'slot_styling');
+    // var content = (this.userType).toUpperCase();
+    // var newTextNode = document.createTextNode(content);
 
     var newLi2 = document.createElement('li');
     var imgLi = document.createElement('img');
-    imgLi.setAttribute('class', 'slot_styling');
+    imgLi.setAttribute('class', 'img_slot_styling');
     var imgSrc = this.userTypePic;
     imgLi.src = imgSrc;
     newLi2.appendChild(imgLi);
-    newLi.appendChild(newTextNode);
-    newUl.appendChild(titleLi);
+    // newLi.appendChild(newTextNode);
+    // newUl.appendChild(titleLi);
     newUl.appendChild(newLi2);
-    newUl.appendChild(newLi);
-    document.getElementById('slot1').style.backgroundColor = "#e09a5e";
+    // newUl.appendChild(newLi);
+    // document.getElementById('slot1').style.backgroundColor = "#e09a5e";
   },
 
   drawBeerFlavor: function() {
@@ -71,21 +73,31 @@ var controller = {
     var flavor = document.getElementById('flavor');
     var parent = flavor.parentNode;
     parent.removeChild(flavor);
+
     var newUl = document.createElement('ul')
     newUl.setAttribute('id', 'newUl');
     newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
-    var titleLi = document.createElement('li');
-    titleLi.setAttribute('class', 'slot_title');
-    titleLi.innerHTML = 'FLAVOR';
-    var newLi = document.createElement('li');
-    newLi.setAttribute('class', 'slot_styling');
-    var content = (this.userFlavor).toUpperCase();
-    var newTextNode = document.createTextNode(content);
-    newLi.appendChild(newTextNode);
-    newUl.appendChild(titleLi);
-    newUl.appendChild(newLi);
-    document.getElementById('slot2').style.backgroundColor = "#e2d35d";
+
+    // var titleLi = document.createElement('li');
+    // titleLi.setAttribute('class', 'slot_title');
+    // titleLi.innerHTML = 'FLAVOR';
+    // var newLi = document.createElement('li');
+    // newLi.setAttribute('class', 'slot_styling');
+    // var content = (this.userFlavor).toUpperCase();
+    // var newTextNode = document.createTextNode(content);
+
+    var newLi2 = document.createElement('li');
+    var imgLi = document.createElement('img');
+    imgLi.setAttribute('class', 'img_slot_styling');
+    var imgSrc = this.userFlavorPic;
+    imgLi.src = imgSrc;
+    newLi2.appendChild(imgLi);
+    // newLi.appendChild(newTextNode);
+    // newUl.appendChild(titleLi);
+    newUl.appendChild(newLi2);
+    // newUl.appendChild(newLi);
+    // document.getElementById('slot2').style.backgroundColor = "#e2d35d";
   },
 
   drawBeerHoppy: function() {
@@ -97,17 +109,25 @@ var controller = {
       newUl.setAttribute('id', 'newUl');
       newUl.setAttribute('class', 'slot');
       parent.appendChild(newUl);
-      var titleLi = document.createElement('li');
-      titleLi.setAttribute('class', 'slot_title');
-      titleLi.innerHTML = 'HOPPY?';
-      var newLi = document.createElement('li');
-      newLi.setAttribute('class', 'slot_styling');
-      var content = (this.userHoppy).toUpperCase();
-      var newTextNode = document.createTextNode(content);
-      newLi.appendChild(newTextNode);
-      newUl.appendChild(titleLi);
-      newUl.appendChild(newLi);
-      document.getElementById('slot3').style.backgroundColor = "#8cb26b";
+      // var titleLi = document.createElement('li');
+      // titleLi.setAttribute('class', 'slot_title');
+      // titleLi.innerHTML = 'HOPPY?';
+      // var newLi = document.createElement('li');
+      // newLi.setAttribute('class', 'slot_styling');
+      // var content = (this.userHoppy).toUpperCase();
+      // var newTextNode = document.createTextNode(content);
+
+      var newLi2 = document.createElement('li');
+      var imgLi = document.createElement('img');
+      imgLi.setAttribute('class', 'img_slot_styling');
+      var imgSrc = this.userHoppyPic;
+      imgLi.src = imgSrc;
+      newLi2.appendChild(imgLi);
+      newUl.appendChild(newLi2);
+      // newLi.appendChild(newTextNode);
+      // newUl.appendChild(titleLi);
+      // newUl.appendChild(newLi);
+      // document.getElementById('slot3').style.backgroundColor = "#8cb26b";
   },
 
   helper: function() {
@@ -162,6 +182,7 @@ var flavor = document.getElementById('flavor');
 
 flavor.addEventListener('click', function(e) {
   controller.userFlavor = e.target.value;
+  controller.userFlavorPic = 'assets/' + controller.userFlavor + '.png';
   controller.drawBeerFlavor();
 })
 
@@ -169,6 +190,7 @@ var hoppy = document.getElementById('hoppy');
 
 hoppy.addEventListener('click', function(e) {
   controller.userHoppy = e.target.value;
+  controller.userHoppyPic = 'assets/' + controller.userHoppy + '.png';
   controller.drawBeerHoppy();
 })
 
