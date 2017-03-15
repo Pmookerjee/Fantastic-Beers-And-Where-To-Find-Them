@@ -44,7 +44,7 @@ var controller = {
     var parent = type.parentNode;
     parent.removeChild(type);
     var newUl = document.createElement('ul')
-    newUl.setAttribute('id', 'newUl');
+    newUl.setAttribute('id', 'newTypeUl');
     newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
     // var titleLi = document.createElement('li');
@@ -172,7 +172,8 @@ var controller = {
   },
 
   slotAnimation: function() {
-    var newUl = document.createElement('Ul');
+    var newUl = document.getElementById('newTypeUl');
+    // var newUl = document.createElement('Ul');
     var newLi = document.getElementById('typeLi');
     var slot1_p = document.getElementById('slot1');
     slot1_p.setAttribute('class', 'swing');
@@ -182,9 +183,9 @@ var controller = {
 
       setTimeout( function() {
 
-      newLi.innerHTML = '<img src= "assets/pitcher.jpeg">';
+      newLi.innerHTML = '<img width="188px" height="229px" src= "assets/pumpkin.png">';
       // newLi.classList.remove('swing');
-      newUl.appendChild('newLi');
+      // newUl.appendChild('newLi');
       newLi.classList.add('show');
 
       }, 2000)

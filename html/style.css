@@ -86,6 +86,13 @@ input {
   flex-direction: column;
 }
 
+#newTypeUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
 .slot_title {
   color: black;
   font-size: 40;
@@ -169,7 +176,7 @@ fieldset {
 
 .swing li {
   opacity: 0;
-  transform: rotateY(-deg);
+  transform: rotateY(-90deg);
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 
@@ -177,9 +184,10 @@ fieldset {
   opacity: 1;
   transform: none;
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+  width: 188px;
 }
 
-.show {
+/*.show {
   opacity: 1;
   transform: none;
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
@@ -203,7 +211,7 @@ transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
   opacity: 0;
   transform: rotateY(-90deg);
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
+}*/
 
 
 
