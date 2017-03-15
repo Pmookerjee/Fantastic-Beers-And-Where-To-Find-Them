@@ -173,9 +173,15 @@ fieldset {
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 
+.swing li.show {
+  opacity: 1;
+  transform: none;
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
 .show {
   opacity: 1;
-  transform: none
+  transform: none;
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 
@@ -187,7 +193,7 @@ li .show{
 
 .show li{
 opacity: 1;
-transform: none
+transform: none;
 transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 

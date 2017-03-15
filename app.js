@@ -183,9 +183,9 @@ var controller = {
       setTimeout( function() {
 
       newLi.innerHTML = '<img src= "assets/pitcher.jpeg">';
-      newLi.classList.remove('swing');
+      // newLi.classList.remove('swing');
       newUl.appendChild('newLi');
-      // newLi.classList.add('show');
+      newLi.classList.add('show');
 
       }, 2000)
 
