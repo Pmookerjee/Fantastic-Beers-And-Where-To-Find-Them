@@ -195,7 +195,7 @@ hoppy.addEventListener('click', function(e) {
 })
 
 
-  var submit = document.getElementById('submit');
+  var submit = document.getElementById('beer_button');
 
   submit.addEventListener('click', function(e){
     e.preventDefault();

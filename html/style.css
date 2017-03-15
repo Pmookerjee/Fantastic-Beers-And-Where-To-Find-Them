@@ -109,9 +109,14 @@ input {
 }
 
 input {
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin-top: .2em;
+  margin-left: 4em;
 }
 
 
@@ -147,4 +152,23 @@ fieldset {
   padding-top: 2.5em;
 }
 
+.swing li {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+#beer_button {
+    background: url("../assets/button.png") no-repeat;
+    text-decoration: none;
+}
+
+#beer_button:focus{
+  outline: none;
+
+}
+
+#beer_button:active{
+   width: 200px;
+}
 /* Animation css*/
