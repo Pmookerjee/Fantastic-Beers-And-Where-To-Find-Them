@@ -79,12 +79,26 @@ input {
   padding-top: .7em;
 }
 
-#newUl {
+.slot {
   display: flex;
   justify-content: center;
   list-style: none;
   flex-direction: column;
 }
+
+/*#newUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+#newTypeUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}*/
 
 .slot_title {
   color: black;
@@ -108,10 +122,21 @@ input {
  justify-content: center;
 }
 
+.placeholder_styling {
+ /*padding: 1em 1em 1em 0;*/
+ display: flex;
+ justify-content: center;
+}
+
 input {
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin-top: .2em;
+  margin-left: 4em;
 }
 
 
@@ -147,4 +172,38 @@ fieldset {
   padding-top: 2.5em;
 }
 
+
+#beer_button {
+    background: url("../assets/button.png") no-repeat;
+    text-decoration: none;
+}
+
+#beer_button:focus{
+  outline: none;
+
+}
+
+#beer_button:active{
+   width: 200px;
+}
+
+
 /* Animation css*/
+
+.swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show {
+  opacity: 1;
+  transform: rotateY(-180deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show_result {
+  opacity: 1;
+  transform: rotateY(-90deg);
+  transition: all 1.0s cubic-bezier(.36,-0.64,.34,1.76);
+}

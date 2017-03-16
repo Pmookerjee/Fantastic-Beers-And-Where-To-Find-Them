@@ -2,9 +2,9 @@
 
 var beers = [];
 
-function Beer(name, type, flavor, hoppy, store, address, lat, long) {
+function Beer(name, img, type, flavor, hoppy, store, address, lat, long) {
   this.name = name;
-  this.img = name + '.jpg';
+  this.img = img;
   this.type = type;
   this.flavor = flavor;
   this.hoppy = hoppy;
@@ -22,7 +22,7 @@ function Beer(name, type, flavor, hoppy, store, address, lat, long) {
     dataType: 'json',
     success: function(data) {
       for(var x in data) {
-        beers[x] = new Beer(data[x].name, data[x].type, data[x].flavor, data[x].hoppy, data[x].store, data[x].address, data[x].lat, data[x].long);
+        beers[x] = new Beer(data[x].name, data[x].img, data[x].type, data[x].flavor, data[x].hoppy, data[x].store, data[x].address, data[x].lat, data[x].long);
       }
     }
   });
@@ -44,28 +44,19 @@ var controller = {
     var parent = type.parentNode;
     parent.removeChild(type);
     var newUl = document.createElement('ul')
-    newUl.setAttribute('id', 'newUl');
+    newUl.setAttribute('id', 'newTypeUl');
     newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
-    // var titleLi = document.createElement('li');
-    // titleLi.setAttribute('class', 'slot_title');
-    // titleLi.innerHTML = 'TYPE';
-    // var newLi = document.createElement('li');
-    // newLi.setAttribute('class', 'slot_styling');
-    // var content = (this.userType).toUpperCase();
-    // var newTextNode = document.createTextNode(content);
 
     var newLi2 = document.createElement('li');
+    newLi2.setAttribute('id', 'typeLi');
     var imgLi = document.createElement('img');
     imgLi.setAttribute('class', 'img_slot_styling');
     var imgSrc = this.userTypePic;
     imgLi.src = imgSrc;
     newLi2.appendChild(imgLi);
-    // newLi.appendChild(newTextNode);
-    // newUl.appendChild(titleLi);
     newUl.appendChild(newLi2);
-    // newUl.appendChild(newLi);
-    // document.getElementById('slot1').style.backgroundColor = "#e09a5e";
+
   },
 
   drawBeerFlavor: function() {
@@ -75,70 +66,52 @@ var controller = {
     parent.removeChild(flavor);
 
     var newUl = document.createElement('ul')
-    newUl.setAttribute('id', 'newUl');
+    newUl.setAttribute('id', 'newFlavorUl');
     newUl.setAttribute('class', 'slot');
     parent.appendChild(newUl);
 
-    // var titleLi = document.createElement('li');
-    // titleLi.setAttribute('class', 'slot_title');
-    // titleLi.innerHTML = 'FLAVOR';
-    // var newLi = document.createElement('li');
-    // newLi.setAttribute('class', 'slot_styling');
-    // var content = (this.userFlavor).toUpperCase();
-    // var newTextNode = document.createTextNode(content);
-
     var newLi2 = document.createElement('li');
+    newLi2.setAttribute('id', 'flavorLi');
     var imgLi = document.createElement('img');
     imgLi.setAttribute('class', 'img_slot_styling');
     var imgSrc = this.userFlavorPic;
     imgLi.src = imgSrc;
     newLi2.appendChild(imgLi);
-    // newLi.appendChild(newTextNode);
-    // newUl.appendChild(titleLi);
     newUl.appendChild(newLi2);
-    // newUl.appendChild(newLi);
-    // document.getElementById('slot2').style.backgroundColor = "#e2d35d";
   },
 
   drawBeerHoppy: function() {
 
-      var hoppy = document.getElementById('hoppy');
-      var parent = hoppy.parentNode;
-      parent.removeChild(hoppy);
-      var newUl = document.createElement('ul')
-      newUl.setAttribute('id', 'newUl');
-      newUl.setAttribute('class', 'slot');
-      parent.appendChild(newUl);
-      // var titleLi = document.createElement('li');
-      // titleLi.setAttribute('class', 'slot_title');
-      // titleLi.innerHTML = 'HOPPY?';
-      // var newLi = document.createElement('li');
-      // newLi.setAttribute('class', 'slot_styling');
-      // var content = (this.userHoppy).toUpperCase();
-      // var newTextNode = document.createTextNode(content);
+    var hoppy = document.getElementById('hoppy');
+    var parent = hoppy.parentNode;
+    parent.removeChild(hoppy);
+    var newUl = document.createElement('ul')
+    newUl.setAttribute('id', 'newHoppyUl');
+    newUl.setAttribute('class', 'slot');
+    parent.appendChild(newUl);
 
-      var newLi2 = document.createElement('li');
-      var imgLi = document.createElement('img');
-      imgLi.setAttribute('class', 'img_slot_styling');
-      var imgSrc = this.userHoppyPic;
-      imgLi.src = imgSrc;
-      newLi2.appendChild(imgLi);
-      newUl.appendChild(newLi2);
-      // newLi.appendChild(newTextNode);
-      // newUl.appendChild(titleLi);
-      // newUl.appendChild(newLi);
-      // document.getElementById('slot3').style.backgroundColor = "#8cb26b";
+    var newLi2 = document.createElement('li');
+    newLi2.setAttribute('id', 'hoppyLi');
+    var imgLi = document.createElement('img');
+    imgLi.setAttribute('class', 'img_slot_styling');
+    var imgSrc = this.userHoppyPic;
+    imgLi.src = imgSrc;
+    newLi2.appendChild(imgLi);
+    newUl.appendChild(newLi2);
+
   },
 
   helper: function() {
+    // debugger;
     var options = this.getPossibleOptions();
     this.getRandomBeer(options);
-    this.drawRandomBeer();
+    // this.drawRandomBeer();
+    this.slotAnimation();
   },
 
   getPossibleOptions: function() {
 
-     var optionsRound1 = [], optionsRound2 = [], optionsRound3 = [];
+    var optionsRound1 = [], optionsRound2 = [], optionsRound3 = [];
 
     for(var i=0; i<beers.length; i++){
       if(this.userHoppy === beers[i].hoppy){
@@ -167,8 +140,72 @@ var controller = {
 
   drawRandomBeer: function(){
     console.log('Your beer is ' + this.chosenBeer.name);
+  },
+
+  slotAnimation: function() {
+
+    var newUl = document.getElementById('newTypeUl');
+    var newLi = document.getElementById('typeLi');
+    var slot1_p = document.getElementById('p_type');
+
+    slot1_p.setAttribute('class', 'swing');
+    newLi.setAttribute('class', 'swing');
+
+    setTimeout( function() {
+
+      newLi.innerHTML = '<img src= "assets/placeholder_beer.png">';
+      newLi.setAttribute('class', 'placeholder_styling');
+      // newLi.classList.remove('swing');
+      // newUl.appendChild('newLi');
+      newLi.classList.add('show');
+
+    }, 500);
+
+    var newUl3 = document.getElementById('newHoppyUl');
+    var newLi3 = document.getElementById('hoppyLi');
+    var slot3_p = document.getElementById('p_hoppy');
+
+    setTimeout(function() {
+
+<<<<<<< HEAD
+      slot3_p.setAttribute('class', 'swing');
+      newLi3.setAttribute('class', 'swing');
+    }, 1000);
+
+    setTimeout( function() {
+=======
+   //figure out why chosenBeer is undefined
+>>>>>>> fa1fcb7997c2bc9e6b6768f0aa1d3a7eeedd091d
+
+      newLi3.innerHTML = '<img src= "assets/placeholder_beer.png">';
+      newLi3.setAttribute('class', 'placeholder_styling');
+      newLi3.classList.add('show');
+
+    }, 1500);
+
+    var newUl2 = document.getElementById('newFlavorUl');
+    var newLi2 = document.getElementById('flavorLi');
+    var slot2_p = document.getElementById('p_flavor');
+
+    setTimeout(function() {
+
+      slot2_p.setAttribute('class', 'swing');
+      newLi2.setAttribute('class', 'swing');
+    }, 2000);
+
+    setTimeout( function() {
+      newLi2.innerHTML = '<img src= "assets/punkuccino.png">';
+
+      // newLi2.innerHTML = '<img src= "assets/"' + this.chosenBeer.img + '>';
+      newLi2.setAttribute('class', 'placeholder_styling');
+      newLi2.classList.remove('swing');
+      newLi2.classList.add('show_result');
+
+    }, 2500);
   }
 }
+
+
 
 var type = document.getElementById('type');
 
@@ -195,12 +232,12 @@ hoppy.addEventListener('click', function(e) {
 })
 
 
-  var submit = document.getElementById('submit');
+var submit = document.getElementById('beer_button');
 
-  submit.addEventListener('click', function(e){
-    e.preventDefault();
-    controller.helper();
-    type.removeEventListener('click', function(){});
-    flavor.removeEventListener('click', function(){});
-    hoppy.removeEventListener('click', function(){});
-  })
+submit.addEventListener('click', function(e){
+  e.preventDefault();
+  controller.helper();
+  type.removeEventListener('click', function(){});
+  flavor.removeEventListener('click', function(){});
+  hoppy.removeEventListener('click', function(){});
+})

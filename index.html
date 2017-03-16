@@ -46,46 +46,13 @@
                   <h2>SLOT MACHINE</h2>
                   <br>
                   <section class="slot_machine">
-                    <!-- <div class="slots" id="slot1">
-                      <ul id="type">
-                        <li>Select a type</li>
-                        <li><input class="button_option" type="button" id="ale" value="Pale Ale"></li>
-                        <li><input class="button_option" type="button" id="ipa" value="IPA"></li>
-                        <li><input class="button_option" type="button" id="stout" value="Stout"></li>
-                        <li><input class="button_option" type="button" id="belgian" value="Belgian"></li>
-                        <li><input class="button_option" type="button" id="sour" value="Sour"></li>
-                      </ul>
-                    </div>
-                    <div class="slots" id="slot2">
-                      <ul id="flavor">
-                        <li>Select a flavor</li>
-                        <li><input class="button_option" type="button" id="banana" value="Banana"></li>
-                        <li><input class="button_option" type="button" id="coffee" value="Coffee"></li>
-                        <li><input class="button_option" type="button" id="chocolate" value="Chocolate"></li>
-                        <li><input class="button_option" type="button" id="pumpkin" value="Pumpkin"></li>
-                        <li><input class="button_option" type="button" id="citrus" value="Citrus"></li>
-                          <li><input class="button_option" type="button" id="berry" value="Berry"></li>
-                      </ul>
-                    </div>
-                    <div class="slots" id="slot3">
-                      <ul id="hoppy">
-                        <li>Hoppy?</li>
-                        <li><input class="button_option" type="button" id="yes" value="yes"></li>
-                        <li><input class="button_option" type="button" id="no" value="no"></li>
-                      </ul>
-                    </div> -->
                     <fieldset id="slot1">
-                      <p class="category_header">Select a type</p>
+                      <p id="p_type" class="category_header">Select a type</p>
                       <form id="type">
 
                         <br>
-                        <!-- <input class="radio" type="radio" name="type" value="ale" required>Pale Ale</input>
-                        <input class="radio" type="radio" name="type" value="ipa">IPA</input>
-                        <input class="radio" type="radio" name="type" value="stout">Stout</input>
-                        <input class="radio" type="radio" name="type" value="belgian">Belgian</input>
-                        <input class="radio" type="radio" name="type" value="sour">Sour</input> -->
                         <select name="type" size="5">
-                          <option value="ale">Pale Ale</option>
+                          <option value="ale">Ale</option>
                           <option value="ipa">IPA</option>
                           <option value="stout">Stout</option>
                           <option value="belgian">Belgian</option>
@@ -94,16 +61,10 @@
                       </form>
                     </fieldset>
                     <fieldset id="slot2">
-                      <p class="category_header">Select a flavor</p>
+                      <p id="p_flavor" class="category_header">Select a flavor</p>
                       <form id="flavor">
 
                         <br>
-                        <!-- <input class="radio"type="radio" name="flavor" value="banana" required>Banana</input>
-                        <input class="radio"type="radio" name="flavor" value="coffee" required>Coffee</input>
-                        <input class="radio"type="radio" name="flavor" value="chocolate" required>Chocolate</input>
-                        <input class="radio"type="radio" name="flavor" value="pumpkin" required>Pumpkin</input>
-                        <input class="radio"type="radio" name="flavor" value="citrus" required>Citrus</input>
-                        <input class="radio"type="radio" name="flavor" value="berry" required>Berry</input> -->
                         <select name="flavor" size="6">
                           <option value="banana">Banana</option>
                           <option value="coffee">Coffee</option>
@@ -115,7 +76,7 @@
                       </form>
                     </fieldset>
                     <fieldset id="slot3">
-                      <p class="category_header">Hoppy?</p>
+                      <p id="p_hoppy" class="category_header">Hoppy?</p>
                       <form id="hoppy">
 
                         <br>
@@ -123,16 +84,14 @@
                           <option value="yes">Yes</option>
                           <option value="no">No</option>
                         </select>
-                        <!-- <input class="radio"type="radio" name="hoppy" value="no" required>No</input>
-                        <input class="radio"type="radio" name="hoppy" value="yes" required>Yes</input> -->
 
                       </form>
                     </fieldset>
                   </section>
                   <fieldset class="submit_button">
                     <form>
-                      <input type="submit" name="submit" value="Get Yo Beer" id="submit">
-                      <input type="button" id="playBtn" value="play">
+                      <input type="submit" value="" id="beer_button">
+                      <!-- <input type="beer_button" id="playBtn" value="play"> -->
                     </form>
                   </fieldset>
 
@@ -179,18 +138,12 @@
           <!-- END OF PARALLAX VIEW -->
         </div>
       </div>
-    </div>
-  </div>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="jquery.jSlots.js" charset="utf-8"></script>
-  <script src="jquery.easing.1.3.js" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
 
 </script>
+  <script type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" src="app.js"></script>
-  <!-- <video autoplay loop id="video-background" muted>
-  <source src="https://player.vimeo.com/external/158148793.hd.mp4?s=8e8741dbee251d5c35a759718d4b0976fbf38b6f&profile_id=119&oauth2_token_id=57447761" type="video/mp4">
-</video> -->
 </body>
 </html>
