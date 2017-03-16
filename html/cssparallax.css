@@ -42,13 +42,13 @@
   padding: 42px 0;
 }
 
-.fbwft-parallaxvideo{
+.fbwft-parallaxvideo {
   height: 175px;
   padding-bottom: 50px;
   padding-top: 50px;
 }
 
-.fbwft-parallaxvideo iframe{
+.fbwft-parallaxvideo video{
   min-width: 100%;
   position: fixed;
   top:0;
@@ -63,7 +63,7 @@
   text-transform: uppercase;
 }
 
-h2{
+h2 {
   color: #fff;
   font-family: "PT Sans",sans-serif;
   font-size: 32px;
@@ -71,7 +71,7 @@ h2{
   text-align: center;
 }
 
-h1{
+h1 {
   font-family: "PT Sans",sans-serif;
   font-weight: 700;
   font-size: 76px;
