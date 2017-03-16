@@ -185,12 +185,13 @@ var controller = {
 
       setTimeout( function() {
 
-      newLi.innerHTML = '<img width="188px" height="229px" src= "assets/pitcher.jpg">';
+      newLi.innerHTML = '<img src= "assets/placeholder_beer.png">';
+      newLi.setAttribute('class', 'placeholder_styling');
       // newLi.classList.remove('swing');
       // newUl.appendChild('newLi');
       newLi.classList.add('show');
 
-    }, 1500)
+    }, 1000)
 
 
 

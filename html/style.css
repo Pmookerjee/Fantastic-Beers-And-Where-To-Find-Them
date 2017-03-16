@@ -115,6 +115,12 @@ input {
  justify-content: center;
 }
 
+.placeholder_styling {
+ /*padding: 1em 1em 1em 0;*/
+ display: flex;
+ justify-content: center;
+}
+
 input {
   /*border-radius: 5px;*/
   display: flex;
