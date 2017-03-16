@@ -36,7 +36,6 @@ var controller = {
   userFlavorPic: '',
   userHoppy: '',
   userHoppyPic: '',
-  chosenBeer: {},
 
   drawBeerType: function() {
 
@@ -87,7 +86,7 @@ var controller = {
     parent.removeChild(hoppy);
     var newUl = document.createElement('ul')
     newUl.setAttribute('id', 'newHoppyUl');
-    newUl.setAttribute('class', 'slot');
+    newUl.setAttribute('class', 'slot3');
     parent.appendChild(newUl);
 
     var newLi2 = document.createElement('li');
@@ -102,11 +101,11 @@ var controller = {
   },
 
   helper: function() {
-    // debugger;
+
     var options = this.getPossibleOptions();
-    this.getRandomBeer(options);
+    var chosenBeer = this.getRandomBeer(options);
     // this.drawRandomBeer();
-    this.slotAnimation();
+    this.slotAnimation(chosenBeer);
   },
 
   getPossibleOptions: function() {
@@ -134,16 +133,19 @@ var controller = {
   },
 
   getRandomBeer: function(opts) {
+
     var i = Math.floor(Math.random() * opts.length)
-    this.chosenBeer = opts[i];
+    return opts[i];
+
   },
 
   drawRandomBeer: function(){
     console.log('Your beer is ' + this.chosenBeer.name);
   },
 
-  slotAnimation: function() {
+  slotAnimation: function(chosenBeer) {
 
+    //Slot 1 fade out
     var newUl = document.getElementById('newTypeUl');
     var newLi = document.getElementById('typeLi');
     var slot1_p = document.getElementById('p_type');
@@ -151,38 +153,35 @@ var controller = {
     slot1_p.setAttribute('class', 'swing');
     newLi.setAttribute('class', 'swing');
 
+    //Slot 1 fade in with beer placeholder
     setTimeout( function() {
 
-      newLi.innerHTML = '<img src= "assets/placeholder_beer.png">';
-      newLi.setAttribute('class', 'placeholder_styling');
-      // newLi.classList.remove('swing');
-      // newUl.appendChild('newLi');
       newLi.classList.add('show');
+      newLi.innerHTML = '<img class="placeholder_styling" src= "assets/placeholder_beer.png">';
 
-    }, 500);
+    }, 1000);
 
+    //Slot 3 fade out
     var newUl3 = document.getElementById('newHoppyUl');
     var newLi3 = document.getElementById('hoppyLi');
     var slot3_p = document.getElementById('p_hoppy');
 
+
     setTimeout(function() {
 
-<<<<<<< HEAD
       slot3_p.setAttribute('class', 'swing');
       newLi3.setAttribute('class', 'swing');
-    }, 1000);
+    }, 1800);
 
+    //Slot 3 fade in with beer placeholder
     setTimeout( function() {
-=======
-   //figure out why chosenBeer is undefined
->>>>>>> fa1fcb7997c2bc9e6b6768f0aa1d3a7eeedd091d
 
-      newLi3.innerHTML = '<img src= "assets/placeholder_beer.png">';
-      newLi3.setAttribute('class', 'placeholder_styling');
       newLi3.classList.add('show');
+      newLi3.innerHTML = '<img class="placeholder_styling" src= "assets/placeholder_beer.png">';
 
-    }, 1500);
+    }, 2300);
 
+    //Slot 2 fade out
     var newUl2 = document.getElementById('newFlavorUl');
     var newLi2 = document.getElementById('flavorLi');
     var slot2_p = document.getElementById('p_flavor');
@@ -191,21 +190,36 @@ var controller = {
 
       slot2_p.setAttribute('class', 'swing');
       newLi2.setAttribute('class', 'swing');
-    }, 2000);
-
-    setTimeout( function() {
-      newLi2.innerHTML = '<img src= "assets/punkuccino.png">';
-
-      // newLi2.innerHTML = '<img src= "assets/"' + this.chosenBeer.img + '>';
-      newLi2.setAttribute('class', 'placeholder_styling');
-      newLi2.classList.remove('swing');
-      newLi2.classList.add('show_result');
-
     }, 2500);
+
+    //Slot 2 fade in with beer RESULT
+    setTimeout( function() {
+
+      slot2_p.classList.add('show_result');
+
+      //Check if there's a match... if not, display struck out msg
+      if(!chosenBeer){
+        var imgPath = 'assets/no_luck.png';
+        slot2_p.innerHTML = "You've struck out!";
+        slot2_p.classList.add('blink');
+
+      //If match, display beer photo and name
+      } else {
+        var imgPath = 'assets/' + chosenBeer.img;
+        slot2_p.classList.add('blink');
+        slot2_p.innerHTML = chosenBeer.name;
+      }
+
+      newLi2.classList.remove('swing');
+      newLi2.classList.add('results_styling');
+      newLi2.classList.add('show_result');
+      newLi2.innerHTML = '<img id="beer_result_img" class="results_styling" src=' + imgPath + '>';
+      //make the beer result glow with background so img doesn't look 'flattened'
+      $("#beer_result_img").glow({ radius: "14", color:"gold"});
+
+    }, 3000);
   }
 }
-
-
 
 var type = document.getElementById('type');
 
@@ -230,7 +244,6 @@ hoppy.addEventListener('click', function(e) {
   controller.userHoppyPic = 'assets/' + controller.userHoppy + '.png';
   controller.drawBeerHoppy();
 })
-
 
 var submit = document.getElementById('beer_button');
 
