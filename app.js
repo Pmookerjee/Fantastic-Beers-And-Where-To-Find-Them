@@ -194,7 +194,7 @@ var controller = {
     }, 1000)
 
 
-
+   //figure out why chosenBeer is undefined
 
 
 
