@@ -22,3 +22,129 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+input {
+  color: white;
+}
+
+
+.slot_machine {
+  display: flex;
+  justify-content: center;
+  width: 690px;
+  height: 335px;
+  background-image: url("../assets/slot-machine.png");
+  margin: 0 auto;
+  border: #D39639 solid 10px;
+  border-radius: 20px;
+
+}
+
+form {
+ display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+
+}
+
+select {
+  background-color: inherit;
+  border: none;
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  font-family: fantasy;
+  font-size: 18px;
+}
+
+option {
+  text-align: center;
+}
+
+label {
+  display: inline;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+
+}
+
+.submit_button {
+  margin: 0 auto;
+  width: 20%;
+  padding-top: .7em;
+}
+
+#newUl {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+.slot_title {
+  color: black;
+  font-size: 40;
+  font-weight: bolder;
+  font-family: fantasy;
+  padding: 1em 1em 1em 0;
+}
+
+.slot_styling {
+  color: black;
+  font-size: 40;
+  font-weight: bold;
+  font-family: fantasy;
+  padding: 1em 1em 5% 0;
+}
+
+.img_slot_styling {
+ padding: 1em 1em 1em 0;
+ display: flex;
+ justify-content: center;
+}
+
+input {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+fieldset {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: none;
+   /*background-image: url("../assets/img_fjords.jpg");*/
+}
+
+#slot1 p {
+  color: #D39639;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 20px;
+  padding-top: 2.5em;
+}
+
+#slot2 p {
+  color: #D39639;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 20px;
+  padding-top: 2.5em;
+}
+
+#slot3 p {
+  color: #D39639;
+  text-align: center;
+  font-family: fantasy;
+  font-size: 20px;
+  padding-top: 2.5em;
+}
+
+/* Animation css*/
