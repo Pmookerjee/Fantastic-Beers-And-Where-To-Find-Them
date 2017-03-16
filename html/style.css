@@ -114,14 +114,14 @@ li {
   /*padding: 1em 1em 1em 0;*/
   display: flex;
   justify-content: center;
-  padding-bottom: 6em;
-  padding-right: 1em;
+  padding-bottom: 7em;
+  padding-right: .5em;
 
 }
 
 
 /*Beer button:*/
-input {
+/*input {
   display: flex;
   justify-content: center;
   width: 100px;
@@ -129,7 +129,7 @@ input {
   border: none;
   margin-top: .2em;
   margin-left: 3.3em;
-}
+}*/
 
 fieldset {
   width: 100%;
@@ -163,10 +163,29 @@ fieldset {
   padding-top: 2.5em;
 }
 
+#button_holder {
+  display: flex;
+  justify-content: center;
+}
 
 #beer_button {
   background: url("../assets/button.png") no-repeat;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 106px;
+  height: 99px;
+  border: none;
+  margin-top: .2em;
+  margin-left: 3.3em;
+}
+
+#playAgain_button {
+  background: url("../assets/gold_button.png") no-repeat;
+  text-decoration: none;
+  border: none;
+  width: 120px;
+  height: 112px;
 }
 
 #beer_button:focus{
@@ -177,7 +196,11 @@ fieldset {
 #beer_button:active{
   width: 200px;
 }
-
+/*
+#p_type {
+  text-align: center;
+  padding-left: .5em;
+}*/
 
 /* Animation css*/
 
