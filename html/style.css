@@ -79,7 +79,14 @@ input {
   padding-top: .7em;
 }
 
-#newUl {
+.slot {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+}
+
+/*#newUl {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -91,7 +98,7 @@ input {
   justify-content: center;
   list-style: none;
   flex-direction: column;
-}
+}*/
 
 .slot_title {
   color: black;
@@ -180,17 +187,8 @@ fieldset {
    width: 200px;
 }
 
-/*.swing li {
-  opacity: 0;
-  transform: rotateY(-90deg);
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
 
-li .swing {
-  opacity: 0;
-  transform: rotateY(-90deg);
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}*/
+/* Animation css*/
 
 .swing {
   opacity: 0;
@@ -204,40 +202,8 @@ li .swing {
   transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
 }
 
-/*p.swing {
-  opacity: 0;
-  transform: rotateY(-90deg);
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}*/
-
-
-/*.show {
-  opacity: 1;
-  transform: none;
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
-
-li .show{
-  opacity: 1;
-  transform: none;
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
-
-.show li{
-opacity: 1;
-transform: none;
-transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}
-
-
-
-
-
-
-/*.show img {
+.show_result {
   opacity: 1;
   transform: rotateY(-90deg);
-  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
-}*/
-
-/* Animation css*/
+  transition: all 1.0s cubic-bezier(.36,-0.64,.34,1.76);
+}
