@@ -167,11 +167,15 @@ var controller = {
 
     setTimeout(function() {
 
+<<<<<<< HEAD
       slot3_p.setAttribute('class', 'swing');
       newLi3.setAttribute('class', 'swing');
     }, 1000);
 
     setTimeout( function() {
+=======
+   //figure out why chosenBeer is undefined
+>>>>>>> fa1fcb7997c2bc9e6b6768f0aa1d3a7eeedd091d
 
       newLi3.innerHTML = '<img src= "assets/placeholder_beer.png">';
       newLi3.setAttribute('class', 'placeholder_styling');
