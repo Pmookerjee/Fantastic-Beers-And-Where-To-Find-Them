@@ -50,7 +50,7 @@
 
   {
     "name": "Raspberry Sour - Avery Brewing",
-    "img": "",
+    "img": "raspberrysour.png",
     "type": "sour",
     "flavor": "berry",
     "hoppy": "no",
@@ -60,7 +60,64 @@
     "long": -122.3079137
   }
 
+  {
+    "name": "Southern Tier Tripel Cafe",
+    "img": "tripelcafe.png",
+    "type": "belgian",
+    "flavor": "coffee",
+    "hoppy": "no",
+    "store": "Skylark Cafe",
+    "address": "3803 Delridge Way SW, Seattle, WA 98106",
+    "lat": 47.569984,
+    "long": -122.362501
+  }
 
+  {
+    "name": "Funky Pumpkin",
+    "img": "funkypumpkin.png",
+    "type": "sour",
+    "flavor": "pumpkin",
+    "hoppy": "no",
+    "store": "Boulevard Brewing Company",
+    "address": "2501 Southwest Blvd, Kansas City, MO 64108",
+    "lat": 39.082097,
+    "long": -94.596725
+  }
 
+  {
+    "name": "Gouden Carolus Hopsinjoor",
+    "img": "gouden.png",
+    "type": "belgian",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Whole Foods",
+    "address": "2210 Westlake Ave, Seattle, WA 98121",
+    "lat": 47.618998,
+    "long": -122.338285
+  }
+
+  {
+    "name": "Ice Harbor Fresh",
+    "img": "iceharborfresh.png",
+    "type": "IPA",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Downtown Spirits",
+    "address": "2300 7th Ave, Seattle, WA 98121",
+    "lat": 47.617942,
+    "long": -122.341899
+  }
+
+  {
+    "name": "Georgetown Lucille",
+    "img": "georgetownlucille.png",
+    "type": "IPA",
+    "flavor": "banana",
+    "hoppy": "yes",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.562537,
+    "long": -122.387191
+  }
 
 ]
