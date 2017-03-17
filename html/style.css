@@ -41,7 +41,10 @@ form {
   justify-content: center;
   flex-direction: column;
 }
-
+select:focus {
+  outline: 0;
+  outline-color: none;
+}
 select {
   background-color: inherit;
   border: none;
@@ -49,11 +52,25 @@ select {
   text-shadow: 2px 2px 8px black;
   font-family: fantasy;
   font-size: 18px;
+  outline: 0;
+  overflow: hidden;
+}
+
+textarea {
+  outline: 0;
+  box-shadow: none;
 }
 
 option {
   text-align: center;
+  border: none;
+  outline: 0;
 }
+
+option:focus {
+  outline: none;
+}
+
 
 li {
   display: flex;
@@ -114,21 +131,8 @@ li {
   /*padding: 1em 1em 1em 0;*/
   display: flex;
   justify-content: center;
-  padding-bottom: 6em;
-  padding-right: 1em;
-
-}
-
-
-/*Beer button:*/
-input {
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
-  border: none;
-  margin-top: .2em;
-  margin-left: 3.3em;
+  padding-bottom: 7.5em;
+  padding-right: .5em;
 }
 
 fieldset {
@@ -163,10 +167,54 @@ fieldset {
   padding-top: 2.5em;
 }
 
+#button_holder {
+  display: flex;
+  justify-content: center;
+}
 
 #beer_button {
   background: url("../assets/button.png") no-repeat;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 106px;
+  height: 99px;
+  border: none;
+  margin-top: .2em;
+  margin-left: 3.3em;
+}
+
+#playAgain_button {
+  visibility: hidden;
+}
+
+.showPlayAgainButton {
+  /*background: url("../assets/gold_button.png") no-repeat;*/
+  text-decoration: none;
+  border: none;
+  /*width: 120px;
+  height: 112px;*/02173A
+  background: #db9937;
+  background-image: -webkit-linear-gradient(top, #db9937, #02173A);
+  background-image: -moz-linear-gradient(top, #db9937, #02173A);
+  background-image: -ms-linear-gradient(top, #db9937, #02173A);
+  background-image: -o-linear-gradient(top, #db9937, #02173A);
+  background-image: linear-gradient(to bottom, #db9937, #02173A);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: fantasy;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 3px 15px 3px;
+}
+
+.showPlayAgainButton:hover {
+  background: #02173A;
+  text-decoration: none;
+  border: none;
 }
 
 #beer_button:focus{
@@ -177,7 +225,11 @@ fieldset {
 #beer_button:active{
   width: 200px;
 }
-
+/*
+#p_type {
+  text-align: center;
+  padding-left: .5em;
+}*/
 
 /* Animation css*/
 
