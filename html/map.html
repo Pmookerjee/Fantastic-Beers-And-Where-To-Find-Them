@@ -8,104 +8,97 @@
   <meta charset="utf-8">
   <title>Directions service</title>
 </head>
+<style>
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+</style>
+</head>
+
+<header><h1>F A N T A S T I C &nbsp; B E E R &nbsp; & &nbsp; W H E R E &nbsp; T O &nbsp; F I N D &nbsp; T H E M</h1></header>
+<section id= "link-bar">
+  <a href= "https://www.facebook.com/brian.namgung" target= "blank"><img class= "link-bar" src= "images/fb.png" alt= ""></a>
+  <a href= "https://twitter.com/namgungssi" target="blank"><img class= "link-bar" src= "images/twitter.png" alt=""></a>
+  <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"><img class= "link-bar" src= "images/instagram.png" alt=""></a>
+</section>
+<fieldset>
+  <legend>L O C A T I O N</legend>
+  <form>
+    <table width= "500" cellpadding= "10" cellspacing= "5">
+      <tr>
+        <label class="stackLabel">C O D E &nbsp; F E L L O W S &nbsp; W I L L &nbsp; B E &nbsp; Y O U R &nbsp; S T A R T I N G &nbsp; P O I N T .</label>
+        <label class="stackLabel">S E L E C T &nbsp B E L O W &nbsp; F O R &nbsp; D I R E C T I O N</label>
+        <label class="stackLabel">B E E R &nbsp; N A M E / &nbsp; F L A V O R / &nbsp; L O C A T I O N</label>
+      </tr>
+    </table>
+  </form>
+</fieldset>
+</br>
 <body>
-  <header><h1>F A N T A S T I C &nbsp; B E E R &nbsp; & &nbsp; W H E R E &nbsp; T O &nbsp; F I N D &nbsp; T H E M</h1></header>
-  <section id= "link-bar">
-    <a href= "https://www.facebook.com/brian.namgung" target= "blank"><img class= "link-bar" src= "images/fb.png" alt= ""></a>
-    <a href= "https://twitter.com/namgungssi" target="blank"><img class= "link-bar" src= "images/twitter.png" alt=""></a>
-    <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"><img class= "link-bar" src= "images/instagram.png" alt=""></a>
-  </section>
-  <fieldset>
-    <legend>L O C A T I O N</legend>
-    <form>
-      <table width= "500" cellpadding= "10" cellspacing= "5">
-        <tr>
-          <label class="stackLabel"><a href="http://www.queenannebeerhall.com">Q U E E N &nbsp; A N N E &nbsp; B E E R H A L L</a></label>
-          <label class="stackLabel"><a href="http://www.wholefoodsmarket.com">W H O L E &nbsp; F O O D S &nbsp; M A R K E T</a></label>
-          <label class="stackLabel"><a href="http://www.spaceneedle.com">S K Y &nbsp; C I T Y</a></label>
-          <label class="stackLabel"><a href="http://www.belltownpub.com">B E L L T O W N &nbsp; P U B</a></label>
-          <label class="stackLabel"><a href="http://www.kushibar.com">K U S H I &nbsp; B A R</a></label>
-        </tr>
-      </table>
-    </form>
-    <p>- P L E A S E &nbsp; C L I C K &nbsp; A B O V E &nbsp; F O R &nbsp; D I R E C T I O N S -</p>
-  </fieldset>
-</br>
-</br>
-</br>
+  <div id="floating-panel">
+    <b>S T A R T : </b>
+    <select id="start">
+      <option value="Seattle, WA">Code Fellows</option>
+    </select>
+    <b>E N D : </b>
+    <select id="end">
+      <option value="select location">Select Location</option>
+      <option value="7517 Aurora Ave N, Seattle, WA 98103">Fin Du Monde (Banana) @ Uber Tavern</option>
+      <option value="2219 Douglas Avenue Bellingham, WA 98225">Rougue Double Choclate Stout (Chocolate) @ JJ's In & Out</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Raspberry Sour Avery Brewing (Berry) @ Chuck's Hop Shop</option>
+      <option value="1221 E Pike St, Seattle, WA 98122">Punkuccino (Coffee) @ Elysian Brewing</option>
+      <option value="1221 E Pike St, Seattle, WA 98122">Pubkuccino (Pumpkin) @ Elysian Brewing</option>
+      <option value="3803 Delridge Way SW, Seattle, WA 98106">Triple Cafe (Coffee) @ Skylark Cafe</option>
+      <option value="2501 Southwest Blvd, Kansas City, MO 64108">Funky Pumpkin (Pumpkin) @ Boulevard Brewing Co.</option>
+      <option value="2210 Westlake Ave, Seattle, WA 98121">Gouden Carolus Hopsinjoor (Citrus) @ Whole Foods Market</option>
+      <option value="2300 7th Ave, Seattle, WA 98121">Ice Harbor Fresh (Cirtus) @ Downtown Spirits</option>
+      <option value="4511 California Ave SW, Seattle, WA 98116">Georgetown Lucille (Banana) @ The Beer Junction</option>
+      <option value="2210 Westlake Ave, Seattle, WA 98121">Banana Bread Beer (Banana) @ Whole Foods Market</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Heritage Coffee Brown (Coffee) @ Chuck's Hop Shop</option>
+      <option value="2108 NE 65th St, Seattle, WA 98105">Shrouded Summit (Berry) @ Zeek's</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Framboise (Berry) @ Chuck's Hop Shop</option>
+      <option value="1415 1st Avenue, Seattle WA 98101">Pike Dobble Hopulus (stone fruits, pine & melon) @ Pike Brewing</option>
+    </select>
+  </div>
   <div id="map"></div>
-  <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap"></script>
   <script>
-    var map;
-    function initMap() {
-      var uluru= {lat: 47.6181571, lng:  -122.3540385}
-      var directionsService = new google.maps.DirectionsService;
-      var directionsDisplay = new google.maps.DirectionsRenderer;
+  function initMap() {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      center: {lat: 47.6181571, lng: -122.3540385}
+    });
+    directionsDisplay.setMap(map);
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: uluru
-      });
-      directionsDisplay.setMap(map);
-      var marker= new google.maps.Marker({
-        position: uluru,
-        map: map
-      })
-      setMarkers(map);
-    }
-
-    // Data for the markers consisting of a name, a LatLng and a zIndex for the
-    // order in which these markers should display on top of each other.
-    var beaches = [
-      ['Kushi Bar', 47.6142954,-122.3487456, 4],
-      ['Belltown Pub', 47.6139416,-122.3493729, 5],
-      ['Sky City', 47.6205017,-122.3514667, 3],
-      ['Whole Foods Market', 47.6183657,-122.3401638, 2],
-      ['Queen Anne Beerhall', 47.6194305,-122.3581596, 1]
-    ];
-    function setMarkers(map) {
-      // Adds markers to the map.
-
-      // Marker sizes are expressed as a Size of X,Y where the origin of the image
-      // (0,0) is located in the top left of the image.
-
-      // Origins, anchor positions and coordinates of the marker increase in the X
-      // direction to the right and in the Y direction down.
-      var image = {
-        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-        // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
-        // The origin for this image is (0, 0).
-        origin: new google.maps.Point(0, 0),
-        // The anchor for this image is the base of the flagpole at (0, 32).
-        anchor: new google.maps.Point(0, 32)
-      };
-      // Shapes define the clickable region of the icon. The type defines an HTML
-      // <area> element 'poly' which traces out a polygon as a series of X,Y points.
-      // The final coordinate closes the poly by connecting to the first coordinate.
-      var shape = {
-        coords: [1, 1, 1, 20, 18, 20, 18, 1],
-        type: 'poly'
-      };
-      for (var i = 0; i < beaches.length; i++) {
-        var beach = beaches[i];
-        var marker = new google.maps.Marker({
-          position: {lat: beach[1], lng: beach[2]},
-          map: map,
-          icon: image,
-          shape: shape,
-          title: beach[0],
-          zIndex: beach[3]
-        });
-      }
+    var onChangeHandler = function() {
+      calculateAndDisplayRoute(directionsService, directionsDisplay);
     };
+    document.getElementById('start').addEventListener('change', onChangeHandler);
+    document.getElementById('end').addEventListener('change', onChangeHandler);
+  }
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    directionsService.route({
+      origin: document.getElementById('start').value,
+      destination: document.getElementById('end').value,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+  }
   </script>
+  <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap"></script>
+</script>
 </br>
 </br>
 <footer>C O D E &nbsp; 2 0 1 &nbsp; F I N A L &nbsp; P R O J E C T</footer>
-</br>
 <footer>B R I A N &nbsp; N A M G U N G</footer>
 </br>
 </br>
+</body>
+</html>
 </body>
 </html>
