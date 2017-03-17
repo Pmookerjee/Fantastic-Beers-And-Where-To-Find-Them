@@ -1,32 +1,6 @@
-@font-face {
-    font-family: 'Sketch Block';
-    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot');
-    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.woff') format('woff'),
-         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.ttf') format('truetype'),
-         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.svg#SketchBlockBold') format('svg');
-}
-
-@font-face {
-    font-family: 'Museo 700';
-    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot');
-    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.woff') format('woff'),
-         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.ttf') format('truetype'),
-         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.svg#SketchBlockBold') format('svg');
-}
-
-@font-face {
-    font-family: 'CallunaRegular';
-    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot');
-    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.woff') format('woff'),
-         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.ttf') format('truetype'),
-         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
-}
 
 body {
-	background: #333;
+	background: #000;
 	color: #fff;
 }
 
@@ -36,9 +10,15 @@ body {
 		position: relative;
 	}
 
+	.names {
+		margin-top: 1em;
+		color: #666;
+		font: 3em "Museo 700";
+	}
+
 	blockquote {
 		width: 565px;
-		font: 2.65em CallunaRegular;
+		font: 2.65em sans serif;
 		letter-spacing: .075em;
 		float: left;
 		padding: 45px 0 30px 25px;
@@ -75,21 +55,14 @@ body {
 		blockquote + b {
 			float: right;
 			margin-top: 10px;
+			margin-bottom: 10px;
 			font: 1.6em CallunaRegular;
 			letter-spacing: .15em;
 		}
 
 		blockquote + b:first-letter {
-			color: #fff79e;
+			color: #666;
 			font-size: 1.3em;
 			font-style: italic;
 			letter-spacing: .25em;
-		}
-
-		@-moz-document url-prefix() {
-
-			blockquote:first-letter {
-				margin-top: -29px;
-			}
-
 		}
