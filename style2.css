@@ -55,7 +55,8 @@ body {
 		blockquote + b {
 			float: right;
 			margin-top: 10px;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
+			margin-left: 100px;
 			font: 1.6em CallunaRegular;
 			letter-spacing: .15em;
 		}
