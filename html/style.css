@@ -23,10 +23,6 @@ body {
   background-size: cover;
 }
 
-input {
-  color: white;
-}
-
 
 .slot_machine {
   display: flex;
@@ -41,12 +37,14 @@ input {
 }
 
 form {
- display: flex;
- justify-content: flex-start;
- flex-direction: column;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
+select:focus {
+  outline: 0;
+  outline-color: none;
+}
 select {
   background-color: inherit;
   border: none;
@@ -54,23 +52,30 @@ select {
   text-shadow: 2px 2px 8px black;
   font-family: fantasy;
   font-size: 18px;
+  outline: 0;
+  overflow: hidden;
+}
+
+textarea {
+  outline: 0;
+  box-shadow: none;
 }
 
 option {
   text-align: center;
+  border: none;
+  outline: 0;
 }
 
-label {
-  display: inline;
+option:focus {
+  outline: none;
 }
+
 
 li {
   display: flex;
   justify-content: space-around;
-}
-
-input {
-
+   /*text-align: center;*/
 }
 
 .submit_button {
@@ -79,11 +84,19 @@ input {
   padding-top: .7em;
 }
 
-#newUl {
+.slot {
   display: flex;
   justify-content: center;
   list-style: none;
   flex-direction: column;
+}
+
+.slot3 {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-direction: column;
+  margin-right: 1em;
 }
 
 .slot_title {
@@ -103,24 +116,31 @@ input {
 }
 
 .img_slot_styling {
- padding: 1em 1em 1em 0;
- display: flex;
- justify-content: center;
-}
-
-input {
-  border-radius: 5px;
+  padding: 1em 1em 1em 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
+.placeholder_styling {
+  /*padding: 1em 1em 1em 0;*/
+  display: flex;
+  justify-content: center;
+}
+
+.results_styling {
+  /*padding: 1em 1em 1em 0;*/
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7.5em;
+  padding-right: .5em;
+}
 
 fieldset {
   width: 100%;
   display: flex;
   justify-content: center;
   border: none;
-   /*background-image: url("../assets/img_fjords.jpg");*/
+
 }
 
 #slot1 p {
@@ -147,4 +167,166 @@ fieldset {
   padding-top: 2.5em;
 }
 
+#button_holder {
+  display: flex;
+  justify-content: center;
+}
+
+#beer_button {
+  background: url("../assets/button.png") no-repeat;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 106px;
+  height: 99px;
+  border: none;
+  margin-top: .2em;
+  margin-left: 3.3em;
+}
+
+#playAgain_button {
+  visibility: hidden;
+  border: none;
+}
+
+.showPlayAgainButton {
+  /*background: url("../assets/gold_button.png") no-repeat;*/
+  text-decoration: none;
+  border: none;
+  /*width: 120px;
+  height: 112px;*/02173A
+  background: #db9937;
+  z-index: 10000000;
+  background-image: -webkit-linear-gradient(top, #db9937, #02173A);
+  background-image: -moz-linear-gradient(top, #db9937, #02173A);
+  background-image: -ms-linear-gradient(top, #db9937, #02173A);
+  background-image: -o-linear-gradient(top, #db9937, #02173A);
+  background-image: linear-gradient(to bottom, #db9937, #02173A);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  text-shadow: 1px 1px 3px #666666;
+  font-family: fantasy;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 3px 15px 3px;
+}
+
+.showPlayAgainButton:active {
+  border: none;
+}
+
+.showPlayAgainButton:hover {
+  background: #02173A;
+  text-decoration: none;
+  border: none;
+}
+
+#beer_button {
+  visibility: hidden;
+}
+
+#beer_button:focus{
+  outline: none;
+
+}
+
+#beer_button:active{
+  width: 200px;
+}
+/*
+#p_type {
+  text-align: center;
+  padding-left: .5em;
+}*/
+
 /* Animation css*/
+
+.swing {
+  opacity: 0;
+  transform: rotateY(-90deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show {
+  opacity: 1;
+  transform: rotateY(-180deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.show_result {
+  opacity: 1;
+  transform: rotateY(360deg);
+  transition: all 1.5s cubic-bezier(.36,-0.64,.34,1.76);
+}
+
+.blink {
+  font-size: 22px;
+  padding-top: 0px;
+  /*-webkit-animation:colorchange 20s infinite
+  alternate;*/
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+/*Changing color of result name:*/
+
+/*@-webkit-keyframes colorchange {
+  0% {
+
+    color: blue;
+  }
+
+  10% {
+
+    color: #8e44ad;
+  }
+
+  20% {
+
+    color: #1abc9c;
+  }
+
+  30% {
+
+    color: #d35400;
+  }
+
+  40% {
+
+    color: blue;
+  }
+
+  50% {
+
+    color: #34495e;
+  }
+
+  60% {
+
+    color: blue;
+  }
+
+  70% {
+
+    color: #2980b9;
+  }
+  80% {
+
+    color: #f1c40f;
+  }
+
+  90% {
+
+    color: #2980b9;
+  }
+
+  100% {
+
+    color: pink;
+  }
+}*/
