@@ -1,4 +1,69 @@
-h1{
-font-family: 'Suez One', serif;
-font-color: #black;
+
+body {
+	background: #000;
+	color: #fff;
 }
+
+	.container {
+		width: 590px;
+		margin: 140px auto;
+		position: relative;
+	}
+
+	.names {
+		margin-top: 1em;
+		color: #666;
+		font: 3em "Museo 700";
+	}
+
+	blockquote {
+		width: 565px;
+		font: 2.65em sans serif;
+		letter-spacing: .075em;
+		float: left;
+		padding: 45px 0 30px 25px;
+		margin: 0;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+	}
+
+		blockquote:first-line {
+			font: 1.85em "Sketch Block";
+			color: #666;
+		}
+
+		blockquote:first-letter {
+			font-size: 2.9em;
+			float: left;
+			line-height: .52em;
+			margin-right: -18px;
+			position: relative;
+			z-index: 1;
+		}
+
+		blockquote strong:first-child {
+			margin-left: 8px;
+			letter-spacing: 0;
+		}
+
+		blockquote strong:last-child {
+			font: 2em "Museo 700";
+			text-transform: uppercase;
+			letter-spacing: 0;
+		}
+
+		blockquote + b {
+			float: right;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			margin-left: 100px;
+			font: 1.6em CallunaRegular;
+			letter-spacing: .15em;
+		}
+
+		blockquote + b:first-letter {
+			color: #666;
+			font-size: 1.3em;
+			font-style: italic;
+			letter-spacing: .25em;
+		}
