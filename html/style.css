@@ -186,6 +186,7 @@ fieldset {
 
 #playAgain_button {
   visibility: hidden;
+  border: none;
 }
 
 .showPlayAgainButton {
@@ -195,6 +196,7 @@ fieldset {
   /*width: 120px;
   height: 112px;*/02173A
   background: #db9937;
+  z-index: 10000000;
   background-image: -webkit-linear-gradient(top, #db9937, #02173A);
   background-image: -moz-linear-gradient(top, #db9937, #02173A);
   background-image: -ms-linear-gradient(top, #db9937, #02173A);
@@ -211,10 +213,18 @@ fieldset {
   padding: 15px 3px 15px 3px;
 }
 
+.showPlayAgainButton:active {
+  border: none;
+}
+
 .showPlayAgainButton:hover {
   background: #02173A;
   text-decoration: none;
   border: none;
+}
+
+#beer_button {
+  visibility: hidden;
 }
 
 #beer_button:focus{
