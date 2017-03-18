@@ -156,4 +156,40 @@
     "long": -122.304730
   }
 
+  {
+    "name": "Petrus Aged Pale Sour",
+    "img": "petrusagedpalesour.png",
+    "type": "sour",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "The Pine Box",
+    "address": "1600 Melrose Ave, Seattle, WA 98122",
+    "lat": 47.615521,
+    "long": -122.327628
+  }
+
+  {
+    "name": "Old Chub Scotch Ale",
+    "img": "oldchub.png",
+    "type": "ale",
+    "flavor": "chocolate",
+    "hoppy": "yes",
+    "store": "The Pine Box",
+    "address": "1600 Melrose Ave, Seattle, WA 98122",
+    "lat": 47.615521,
+    "long": -122.327628
+  }
+
+  {
+    "name": "Irish Blessing Coffee Stout",
+    "img": "irishblessing.png",
+    "type": "stout",
+    "flavor": "coffee",
+    "hoppy": "yes",
+    "store": "The Pine Box",
+    "address": "1600 Melrose Ave, Seattle, WA 98122",
+    "lat": 47.615521,
+    "long": -122.327628
+  }
+
 ]
