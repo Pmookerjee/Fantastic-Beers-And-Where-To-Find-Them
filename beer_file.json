@@ -504,15 +504,27 @@
   },
 
   {
-    "name": "Reuben's Summer IPA",
-    "img": "reubens_summer.png",
+    "name": "Ballast Point Even Keel",
+    "img": "even_keel.png",
     "type": "ipa",
     "flavor": "citrus",
     "hoppy": "no",
-    "store": "Reuben's Brewing",
-    "address": "5010 14th Ave NW, Seattle, WA 98107",
-    "lat": 47.6654069,
-    "long": -122.4431088
+    "store": "Whole Foods",
+    "address": "2210 Westlake Ave, Seattle, WA 98121",
+    "lat": 47.618998,
+    "long": -122.338285
+  },
+
+  {
+    "name": "Ballast Point Grapefruit Sculpin",
+    "img": "grapefruit_sculpin.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Patxis Pizza",
+    "address": "5323 Ballard Ave NW, Seattle, WA 98107",
+    "lat": 47.6668367,
+    "long": -122.4539587
   }
 
 ]

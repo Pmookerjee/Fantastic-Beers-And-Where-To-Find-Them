@@ -37,8 +37,11 @@
   <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap"></script>
   <script>
     var map;
+    var beer_lat = localStorage.getItem("lat");
+    var beer_long = localStorage.getItem("long");
+
     function initMap() {
-      var uluru= {lat: 47.6181571, lng:  -122.3540385}
+      var uluru= {beer_lat: 47.6181571, beer_long:  -122.3540385}
       var directionsService = new google.maps.DirectionsService;
       var directionsDisplay = new google.maps.DirectionsRenderer;
 

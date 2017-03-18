@@ -112,7 +112,7 @@ var controller = {
 
     var options = this.getPossibleOptions();
     var chosenBeer = this.getRandomBeer(options);
-    // console.log('Your beer is ' + chosenBeer.name);
+    this.saveStoreInfo(chosenBeer);
     this.slotAnimation(chosenBeer, function() {
       //after executing slotAnimation, do these things:
       var button = document.getElementById('beer_button');
@@ -122,6 +122,14 @@ var controller = {
       newButton.style.visibility = 'visible';
       newButton.classList.add('showPlayAgainButton');
   })
+},
+
+saveStoreInfo: function(beer) {
+  if(beer){
+    localStorage.setItem('store', beer.store);
+    localStorage.setItem('lat', beer.lat);
+    localStorage.setItem('long', beer.long);
+  }
 },
 
   getPossibleOptions: function() {
@@ -306,3 +314,12 @@ var controller = {
        location.reload(false);
        reset.removeEventListener('click', function(){});
   }, false);
+
+  var map = document.getElementById('map_click');
+
+  map.addEventListener('click', function(e){
+    e.preventDefault();
+    var map_page_location = location.href;
+    // document.getElementById('map_click').innerHTML = ''
+    map.removeEventListener('click', function(){});
+  })
