@@ -192,4 +192,76 @@
     "long": -122.327628
   }
 
+  {
+    "name": "Apricot Ale",
+    "img": "apricotale.png",
+    "type": "ale",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Tap House Grill",
+    "address": "1506 6th Ave, Seattle, WA 98101",
+    "lat": 47.611574,
+    "long": -122.334705
+  }
+
+  {
+    "name": "Pike IPA",
+    "img": "pike.png",
+    "type": "IPA",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Tap House Grill",
+    "address": "1506 6th Ave, Seattle, WA 98101",
+    "lat": 47.611574,
+    "long": -122.334705
+  }
+
+  {
+    "name": "Young's Double Chocolate Stout",
+    "img": "doublechocolate.png",
+    "type": "stout",
+    "flavor": "chocolate",
+    "hoppy": "no",
+    "store": "Tap House Grill",
+    "address": "1506 6th Ave, Seattle, WA 98101",
+    "lat": 47.611574,
+    "long": -122.334705
+  }
+
+  {
+    "name": "Dark Heron IPA",
+    "img": "darkheron.png",
+    "type": "IPA",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Brouwer's Cafe",
+    "address": "400 N 35th St, Seattle, WA 98103",
+    "lat": 47.611574,
+    "long": -122.354373
+  }
+
+  {
+    "name": "Dubbel Entendre Belgian",
+    "img": "dubbelentendre.png",
+    "type": "belgian",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Brouwer's Cafe",
+    "address": "400 N 35th St, Seattle, WA 98103",
+    "lat": 47.611574,
+    "long": -122.354373
+  }
+
+  {
+    "name": "The Sister Imperial",
+    "img": "thesister.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Brouwer's Cafe",
+    "address": "400 N 35th St, Seattle, WA 98103",
+    "lat": 47.611574,
+    "long": -122.354373
+  }
+
 ]
