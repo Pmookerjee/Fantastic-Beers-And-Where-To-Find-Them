@@ -318,9 +318,9 @@ saveStoreInfo: function(beer) {
 
   var map = document.getElementById('map_click');
 
-  map.addEventListener('click', function(e){
-    e.preventDefault();
-    var map_page_location = location.href;
-    // document.getElementById('map_click').innerHTML = ''
-    map.removeEventListener('click', function(){});
-  })
+  // map.addEventListener('click', function(e){
+  //   e.preventDefault();
+  //   var map_page_location = location.href;
+  //   // document.getElementById('map_click').innerHTML = ''
+  //   map.removeEventListener('click', function(){});
+  // })
