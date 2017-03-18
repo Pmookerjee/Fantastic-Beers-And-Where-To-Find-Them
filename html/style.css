@@ -54,6 +54,7 @@ select {
   font-size: 18px;
   outline: 0;
   overflow: hidden;
+  padding: 5px;
 }
 
 textarea {
@@ -172,17 +173,17 @@ fieldset {
   justify-content: center;
 }
 
-#beer_button {
-  background: url("../assets/button.png") no-repeat;
+/*#beer_button {
+  background: url("../assets/BeerTap_Active_nbg.png") no-repeat;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  width: 106px;
-  height: 99px;
+  width: 225px;
+  height: 82px;
   border: none;
   margin-top: .2em;
   margin-left: 3.3em;
-}
+}*/
 
 #playAgain_button {
   visibility: hidden;
@@ -207,7 +208,7 @@ fieldset {
   border-radius: 6px;
   text-shadow: 1px 1px 3px #666666;
   font-family: fantasy;
-  color: black;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   padding: 15px 3px 15px 3px;
@@ -215,6 +216,9 @@ fieldset {
 
 .showPlayAgainButton:active {
   border: none;
+  background: #02173A;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .showPlayAgainButton:hover {
@@ -225,15 +229,38 @@ fieldset {
 
 #beer_button {
   visibility: hidden;
+  /*background: url("../assets/BeerTap_Active_nbg.png");
+  width: 225px;
+  height: 82px;*/
+  background: url("../assets/button2.png");
+  width: 137px;
+  height: 128px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin-top: .2em;
+  margin-left: 5em;
+  text-decoration: none;
+  opacity: .7;
+}
+
+#beer_button:hover {
+  opacity: 1;
+  border: none;
+  outline: none;
 }
 
 #beer_button:focus{
   outline: none;
-
+  opacity: .7;
+  border: none;
 }
 
 #beer_button:active{
-  width: 200px;
+  opacity: .7;
+  outline: none;
+  border: none;
 }
 /*
 #p_type {

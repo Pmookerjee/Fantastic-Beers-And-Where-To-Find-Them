@@ -22,7 +22,7 @@ function Beer(name, img, type, flavor, hoppy, store, address, lat, long) {
     dataType: 'json',
     success: function(data) {
       for(var x in data) {
-        beers[x] = new Beer(data[x].name, data[x].img, data[x].type, data[x].flavor, data[x].hoppy, data[x].store, data[x].address, data[x].lat, data[x].long);
+        beers[x] = new Beer(data[x].name, data[x].img.toLowerCase(), data[x].type.toLowerCase(), data[x].flavor.toLowerCase(), data[x].hoppy.toLowerCase(), data[x].store, data[x].address, data[x].lat, data[x].long);
       }
     }
   });
@@ -112,7 +112,7 @@ var controller = {
 
     var options = this.getPossibleOptions();
     var chosenBeer = this.getRandomBeer(options);
-    // this.drawRandomBeer();
+    // console.log('Your beer is ' + chosenBeer.name);
     this.slotAnimation(chosenBeer, function() {
       //after executing slotAnimation, do these things:
       var button = document.getElementById('beer_button');
@@ -246,7 +246,7 @@ var controller = {
 
               // make the beer result glow with background so img doesn't look 'flattened'
               //
-              $("#beer_result_img").glow({ radius: "14", color:"gold"});
+              $("#beer_result_img").glow({ radius: "16", color:"gold"});
 
               // we are finally done, leave now
               //
