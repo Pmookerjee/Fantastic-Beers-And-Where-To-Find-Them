@@ -8,7 +8,8 @@ h1{
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
+  padding: 10px;
 }
 p{
   text-decoration-style: solid;
@@ -16,7 +17,6 @@ p{
 }
 body{
   text-align: center;
-  position: relative;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -49,6 +49,11 @@ a{
   font-style: bold;
   color: black;
   text-decoration: none;
+}
+
+#store_data {
+  font-weight: bold;
+  font-size: 18px;
 }
 label{
   text-align: center;
@@ -94,19 +99,30 @@ ul{
 .footer{
   text-align: center;
   text-decoration-style: solid;
+  padding: 30px;
 }
-#map {
+#map{
   height: 100%;
 }
 html, body{
   height: 100%;
   padding: 0;
   width: 100%;
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
   align-content: center;
   margin-left: auto;
   margin-right: auto;
+}
+#floating-panel{
+  text-align: center;
+  text-decoration-style: solid;
+  padding: 10px;
+  font-style: italic;
+
+}
+#select{
+  font-size: 50px;
 }
 /*
 div id= "two"{
