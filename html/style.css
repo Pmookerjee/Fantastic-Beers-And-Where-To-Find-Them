@@ -117,7 +117,7 @@ li {
 }
 
 .img_slot_styling {
-  padding: 1em 1em 1em 0;
+  padding-right: .5em;
   display: flex;
   justify-content: center;
 }
@@ -133,8 +133,13 @@ li {
   display: flex;
   justify-content: center;
   padding-bottom: 7.5em;
-  padding-right: .5em;
+  padding-right: 1em;
 }
+
+/*.category_header {
+  display: flex;
+  justify-content: center;
+}*/
 
 fieldset {
   width: 100%;
@@ -173,29 +178,14 @@ fieldset {
   justify-content: center;
 }
 
-/*#beer_button {
-  background: url("../assets/BeerTap_Active_nbg.png") no-repeat;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  width: 225px;
-  height: 82px;
-  border: none;
-  margin-top: .2em;
-  margin-left: 3.3em;
-}*/
-
 #playAgain_button {
   visibility: hidden;
   border: none;
 }
 
 .showPlayAgainButton {
-  /*background: url("../assets/gold_button.png") no-repeat;*/
   text-decoration: none;
   border: none;
-  /*width: 120px;
-  height: 112px;*/02173A
   background: #db9937;
   z-index: 10000000;
   background-image: -webkit-linear-gradient(top, #db9937, #02173A);
@@ -219,19 +209,18 @@ fieldset {
   background: #02173A;
   text-decoration: none;
   font-weight: bold;
+  outline: none;
 }
 
 .showPlayAgainButton:hover {
   background: #02173A;
   text-decoration: none;
   border: none;
+  outline: none;
 }
 
 #beer_button {
   visibility: hidden;
-  /*background: url("../assets/BeerTap_Active_nbg.png");
-  width: 225px;
-  height: 82px;*/
   background: url("../assets/button2.png");
   width: 137px;
   height: 128px;
@@ -262,11 +251,6 @@ fieldset {
   outline: none;
   border: none;
 }
-/*
-#p_type {
-  text-align: center;
-  padding-left: .5em;
-}*/
 
 /* Animation css*/
 
@@ -291,69 +275,9 @@ fieldset {
 .blink {
   font-size: 22px;
   padding-top: 0px;
-  /*-webkit-animation:colorchange 20s infinite
-  alternate;*/
   animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
   50% { opacity: 0; }
 }
-
-/*Changing color of result name:*/
-
-/*@-webkit-keyframes colorchange {
-  0% {
-
-    color: blue;
-  }
-
-  10% {
-
-    color: #8e44ad;
-  }
-
-  20% {
-
-    color: #1abc9c;
-  }
-
-  30% {
-
-    color: #d35400;
-  }
-
-  40% {
-
-    color: blue;
-  }
-
-  50% {
-
-    color: #34495e;
-  }
-
-  60% {
-
-    color: blue;
-  }
-
-  70% {
-
-    color: #2980b9;
-  }
-  80% {
-
-    color: #f1c40f;
-  }
-
-  90% {
-
-    color: #2980b9;
-  }
-
-  100% {
-
-    color: pink;
-  }
-}*/

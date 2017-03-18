@@ -6,10 +6,10 @@
     "type": "belgian",
     "flavor":"banana",
     "hoppy": "yes",
-    "store": "Some Store - CHANGE ME",
-    "address": "Some ADDRESS - CHANGE ME",
-    "lat": 21.1200499,
-    "long": 41.354
+    "store": "Full Throttle Bottles",
+    "address": "5909 Airport Way S, Seattle, WA 98108",
+    "lat": 47.5497655,
+    "long": -122.3879047
   },
 
   {
@@ -18,10 +18,10 @@
     "type": "stout",
     "flavor": "chocolate",
     "hoppy": "no",
-    "store": "Some Store - CHANGE ME",
-    "address": "Some ADDRESS - CHANGE ME",
-    "lat": 21.1200499,
-    "long": 41.354
+    "store": "Bottleworks",
+    "address": "1710 N 45th St #3, Seattle, WA 98103",
+    "lat": 47.6615002,
+    "long": -122.4071238
   },
 
   {
@@ -130,7 +130,7 @@
     "address": "2001 E Union St, Seattle, WA 98122",
     "lat": 47.612718,
     "long": -122.3079137
-  }
+  },
 
   {
     "name": "Banana Bread Beer",
@@ -142,7 +142,7 @@
     "address": "2210 Westlake Ave, Seattle, WA 98121",
     "lat": 47.618998,
     "long": -122.338285
-  }
+  },
 
   {
     "name": "Heritage Coffee Brown",
@@ -154,7 +154,7 @@
     "address": "2001 E Union St, Seattle, WA 98122",
     "lat": 47.612718,
     "long": -122.3079137
-  }
+  },
 
   {
     "name": "Shrouded Summit",
@@ -166,7 +166,7 @@
     "address": "2108 NE 65th St, Seattle, WA 98105",
     "lat": 47.676023,
     "long": -122.304730
-  }
+  },
 
   {
     "name": "Petrus Aged Pale Sour",
@@ -178,7 +178,7 @@
     "address": "1600 Melrose Ave, Seattle, WA 98122",
     "lat": 47.615521,
     "long": -122.327628
-  }
+  },
 
   {
     "name": "Old Chub Scotch Ale",
@@ -190,7 +190,7 @@
     "address": "1600 Melrose Ave, Seattle, WA 98122",
     "lat": 47.615521,
     "long": -122.327628
-  }
+  },
 
   {
     "name": "Irish Blessing Coffee Stout",
@@ -202,7 +202,7 @@
     "address": "1600 Melrose Ave, Seattle, WA 98122",
     "lat": 47.615521,
     "long": -122.327628
-  }
+  },
 
   {
     "name": "Apricot Ale",
@@ -214,7 +214,7 @@
     "address": "1506 6th Ave, Seattle, WA 98101",
     "lat": 47.611574,
     "long": -122.334705
-  }
+  },
 
   {
     "name": "Pike IPA",
@@ -226,7 +226,7 @@
     "address": "1506 6th Ave, Seattle, WA 98101",
     "lat": 47.611574,
     "long": -122.334705
-  }
+  },
 
   {
     "name": "Young's Double Chocolate Stout",
@@ -238,7 +238,7 @@
     "address": "1506 6th Ave, Seattle, WA 98101",
     "lat": 47.611574,
     "long": -122.334705
-  }
+  },
 
   {
     "name": "Dark Heron IPA",
@@ -250,7 +250,7 @@
     "address": "400 N 35th St, Seattle, WA 98103",
     "lat": 47.611574,
     "long": -122.354373
-  }
+  },
 
   {
     "name": "Dubbel Entendre Belgian",
@@ -262,7 +262,7 @@
     "address": "400 N 35th St, Seattle, WA 98103",
     "lat": 47.611574,
     "long": -122.354373
-  }
+  },
 
   {
     "name": "The Sister Imperial",
@@ -274,6 +274,245 @@
     "address": "400 N 35th St, Seattle, WA 98103",
     "lat": 47.611574,
     "long": -122.354373
+  },
+
+  {
+    "name": "Dogfish Punkin Ale",
+    "img": "dogfish_punkin.png",
+    "type": "ale",
+    "flavor": "pumpkin",
+    "hoppy": "yes",
+    "store": "The Barrel Thief",
+    "address": "3417 Evanston Ave N #102, Seattle, WA 98103",
+    "lat": 47.6506031,
+    "long": -122.4215367
+  },
+
+  {
+    "name": "Split Shot Espresso Milk Stout",
+    "img": "split_shot.png",
+    "type": "stout",
+    "flavor": "coffee",
+    "hoppy": "yes",
+    "store": "Elysian Tangletown",
+    "address": "2106 N 55th St, Seattle, WA 98103",
+    "lat": 47.6688107,
+    "long": -122.4035587
+  },
+
+  {
+    "name": "Ayinger Ur-Weisse ",
+    "img": "ayinger.png",
+    "type": "belgian",
+    "flavor": "banana",
+    "hoppy": "no",
+    "store": "Bottleworks",
+    "address": "1710 N 45th St #3, Seattle, WA 98103",
+    "lat": 47.6615002,
+    "long": -122.4071238
+  },
+
+  {
+    "name": "Salted Belgian Chocolate Stout",
+    "img": "salted_belgian.png",
+    "type": "stout",
+    "flavor": "chocolate",
+    "hoppy": "no",
+    "store": "Whole Foods",
+    "address": "2210 Westlake Ave, Seattle, WA 98121",
+    "lat": 47.618998,
+    "long": -122.338285
+  },
+
+  {
+    "name": "Booming Rollers Citra",
+    "img": "booming_rollers.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Burgundian",
+    "address": "2253 N 56th St, Seattle, WA 98103",
+    "lat": 47.6688989,
+    "long": 122.4014529
+  },
+
+  {
+    "name": "Cascade Blueberry Ale",
+    "img": "cascade_blueberry_ale.png",
+    "type": "ale",
+    "flavor": "berry",
+    "hoppy": "no",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.5624708,
+    "long": -122.4570222
+  },
+
+  {
+    "name": "Cascade Blueberry Sour",
+    "img": "cascade_blueberry_sour.png",
+    "type": "sour",
+    "flavor": "berry",
+    "hoppy": "yes",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.5624708,
+    "long": -122.4570222
+  },
+
+  {
+    "name": "Pike Dobble Hopulus",
+    "img": "hopulus.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Pike Brewing",
+    "address": "1415 1st Avenue, Seattle WA 98101",
+    "lat": 47.6082134,
+    "long": -122.3419737
+  },
+
+  {
+    "name": "Stone Enjoy By IPA",
+    "img": "enjoy_by_ipa.png",
+    "type": "ipa",
+    "flavor": "coffee",
+    "hoppy": "yes",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.5624708,
+    "long": -122.4570222
+  },
+
+  {
+    "name": "Stone Enjoy By IPA",
+    "img": "enjoy_by_ipa.png",
+    "type": "ipa",
+    "flavor": "chocolate",
+    "hoppy": "yes",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.5624708,
+    "long": -122.4570222
+  },
+
+  {
+    "name": "Framboise Lambic Ale",
+    "img": "framboise.png",
+    "type": "ale",
+    "flavor": "berry",
+    "hoppy": "no",
+    "store": "Chuck's Hop Shop",
+    "address": "2001 E Union St, Seattle, WA 98122",
+    "lat": 47.612718,
+    "long": -122.3079137
+  },
+
+  {
+    "name": "Dark O' The Moon",
+    "img": "dark_o_the_moon.png",
+    "type": "stout",
+    "flavor": "pumpkin",
+    "hoppy": "no",
+    "store": "Elysian Tangletown",
+    "address": "2106 N 55th St, Seattle, WA 98103",
+    "lat": 47.6688107,
+    "long": -122.4035587
+  },
+
+  {
+    "name": "The Gourd Standard",
+    "img": "gourd_standard.png",
+    "type": "ipa",
+    "flavor": "pumpkin",
+    "hoppy": "yes",
+    "store": "Chuck's Hop Shop",
+    "address": "2001 E Union St, Seattle, WA 98122",
+    "lat": 47.612718,
+    "long": -122.3079137
+  },
+
+  {
+    "name": "Hoppy Blonde",
+    "img": "hoppy_blonde.png",
+    "type": "ale",
+    "flavor": "citrus",
+    "hoppy": "yes",
+    "store": "Bottleworks",
+    "address": "1710 N 45th St #3, Seattle, WA 98103",
+    "lat": 47.6615002,
+    "long": -122.4071238
+  },
+
+  {
+    "name": "Hoppy Blonde",
+    "img": "hoppy_blonde.png",
+    "type": "ale",
+    "flavor": "berry",
+    "hoppy": "yes",
+    "store": "Bottleworks",
+    "address": "1710 N 45th St #3, Seattle, WA 98103",
+    "lat": 47.6615002,
+    "long": -122.4071238
+  },
+  {
+    "name": "Seattle Pipes and Drums",
+    "img": "seattle_pipes.png",
+    "type": "stout",
+    "flavor": "chocolate",
+    "hoppy": "no",
+    "store": "Stoup Brewing",
+    "address": "1108 NW 52nd St, Seattle, WA 98107",
+    "lat": 47.6666694,
+    "long": -122.4412458
+  },
+
+  {
+    "name": "Abita Strawberry IPA",
+    "img": "abita_spring.png",
+    "type": "ipa",
+    "flavor": "berry",
+    "hoppy": "yes",
+    "store": "The Beer Junction",
+    "address": "4511 California Ave SW, Seattle, WA 98116",
+    "lat": 47.5624708,
+    "long": -122.4570222
+  },
+
+  {
+    "name": "Founders All Day IPA",
+    "img": "all_day.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Brouwer's Cafe",
+    "address": "400 N 35th St, Seattle, WA 98103",
+    "lat": 47.611574,
+    "long": -122.354373
+  },
+
+  {
+    "name": "Reuben's Summer IPA",
+    "img": "reubens_summer.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Reuben's Brewing",
+    "address": "5010 14th Ave NW, Seattle, WA 98107",
+    "lat": 47.6654069,
+    "long": -122.4431088
+  },
+
+  {
+    "name": "Reuben's Summer IPA",
+    "img": "reubens_summer.png",
+    "type": "ipa",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Reuben's Brewing",
+    "address": "5010 14th Ave NW, Seattle, WA 98107",
+    "lat": 47.6654069,
+    "long": -122.4431088
   }
 
 ]
