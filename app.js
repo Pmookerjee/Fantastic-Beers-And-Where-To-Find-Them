@@ -145,6 +145,7 @@ var controller = {
         optionsRound3.push(optionsRound2[i]);
       }
     }
+    console.log(optionsRound3);
     return optionsRound3;
   },
 
@@ -153,10 +154,6 @@ var controller = {
     var i = Math.floor(Math.random() * opts.length)
     return opts[i];
 
-  },
-
-  drawRandomBeer: function(){
-    console.log('Your beer is ' + this.chosenBeer.name);
   },
 
   slotAnimation: function(chosenBeer, complete) {
@@ -227,7 +224,7 @@ var controller = {
               if(!chosenBeer) {
                 var imgPath = 'assets/no_luck.png';
                 var imgId   = 'dummy';
-                slot2_p.innerHTML = "You've struck out!";
+                slot2_p.innerHTML = "You struck out!";
                 slot2_p.classList.add('blink');
 
               // If match, display beer photo and name
