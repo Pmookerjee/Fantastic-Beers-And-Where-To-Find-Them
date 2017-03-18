@@ -3,7 +3,7 @@
 <head>
   <link href="map.css" rel="stylesheet"/>
   <link href= "http://www.webpage.com"/>
-  <link src= "app.js">
+
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
   <title>Directions service</title>
@@ -13,21 +13,19 @@
 * element that contains the map. */
 </style>
 </head>
-
 <header><h1>F A N T A S T I C &nbsp; B E E R &nbsp; & &nbsp; W H E R E &nbsp; T O &nbsp; F I N D &nbsp; T H E M</h1></header>
 <section id= "link-bar">
-  <a href= "https://www.facebook.com/brian.namgung" target= "blank"><img class= "link-bar" src= "images/fb.png" alt= ""></a>
-  <a href= "https://twitter.com/namgungssi" target="blank"><img class= "link-bar" src= "images/twitter.png" alt=""></a>
-  <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"><img class= "link-bar" src= "images/instagram.png" alt=""></a>
+  <a href= "https://www.facebook.com/brian.namgung" target= "blank"><img class= "link-bar" src= "../assets/fb.png" alt= ""></a>
+  <a href= "https://twitter.com/namgungssi" target="blank"><img class= "link-bar" src= "../assets//twitter.png" alt=""></a>
+  <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"><img class= "link-bar" src= "../assets/instagram.png" alt=""></a>
 </section>
 <fieldset>
   <legend>L O C A T I O N</legend>
   <form>
     <table width= "500" cellpadding= "10" cellspacing= "5">
       <tr>
-        <label class="stackLabel">C O D E &nbsp; F E L L O W S &nbsp; W I L L &nbsp; B E &nbsp; Y O U R &nbsp; S T A R T I N G &nbsp; P O I N T .</label>
-        <label class="stackLabel">S E L E C T &nbsp B E L O W &nbsp; F O R &nbsp; D I R E C T I O N</label>
-        <label class="stackLabel">B E E R &nbsp; N A M E / &nbsp; F L A V O R / &nbsp; L O C A T I O N</label>
+        <label id="store_data" class="stackLabel"></label>
+        <label id="address_data" class="stackLabel"></label>
       </tr>
     </table>
   </form>
@@ -63,36 +61,36 @@
   <div id="map"></div>
   <script>
 
-  function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 7,
-      center: {lat: 47.6181571, lng: -122.3540385}
-    });
-    directionsDisplay.setMap(map);
 
-    var onChangeHandler = function() {
-      calculateAndDisplayRoute(directionsService, directionsDisplay);
-    };
-    document.getElementById('start').addEventListener('change', onChangeHandler);
-    document.getElementById('end').addEventListener('change', onChangeHandler);
-  }
-  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    directionsService.route({
-      origin: document.getElementById('start').value,
-      destination: document.getElementById('end').value,
-      travelMode: 'DRIVING'
-    }, function(response, status) {
-      if (status === 'OK') {
-        directionsDisplay.setDirections(response);
-      } else {
-        window.alert('Directions request failed due to ' + status);
-      }
+  function initMap() {
+    var saved_lat= parseFloat(localStorage.getItem('lat'));
+    var saved_long=parseFloat(localStorage.getItem('long'));
+
+    var uluru = {lat: saved_lat, lng: saved_long};
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
     });
   }
   </script>
   <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap"></script>
+</script>
+<script>
+
+var saved_store=localStorage.getItem('store');
+var saved_address=localStorage.getItem('address');
+var store_label = document.getElementById('store_data');
+store_label.innerHTML = saved_store;
+var address_label = document.getElementById('address_data');
+address_label.innerHTML = saved_address;
+
+
 </script>
 </br>
 </br>
