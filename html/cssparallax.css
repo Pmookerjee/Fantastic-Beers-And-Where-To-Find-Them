@@ -69,6 +69,7 @@ h2 {
   font-size: 32px;
   margin: 0;
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 h1 {
@@ -79,6 +80,16 @@ h1 {
   text-transform: uppercase;
   color:#FFF;
   margin: 0;
+  text-shadow: 2px 2px black;
+}
+
+a {
+  color: inherit;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 p {
