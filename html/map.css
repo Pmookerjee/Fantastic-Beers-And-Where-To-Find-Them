@@ -4,12 +4,13 @@ html{
   display: block;
 }
 h1{
-  font-family: fantasy, impact;
+  font-family: "PT Sans",sans-serif;
   font-weight: bold;
   font-style: italic;
   text-align: center;
   font-size: 40px;
   padding: 10px;
+  letter-spacing: 6px;
 }
 p{
   text-decoration-style: solid;
@@ -80,6 +81,7 @@ ul{
   text-align: center;
   list-style-type: none;
 }
+
 #link-bar{
   padding: .5em;
   display: flex;
