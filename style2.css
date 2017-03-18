@@ -69,17 +69,21 @@ body {
 		}
 		.giveusyourmoney {
 			text-align: center;
-			margin: 0 auto;
+			margin: 0;
 			width: 200px;
-			padding: .1em;
 			color: #666;
 			font: 2em "Museo 700";
 		}
 		.pleaseMoneys{
 			text-align: center;
 			width: 100px;
-			color: #666;
+			color: #fff;
 			font: .8em "Museo 700";
+			font-style: italic;
+		}
+		#please{
+			margin-top: -40px;
+			margin-bottom:20px;
 		}
 		form {
 		  margin: 0 auto;
