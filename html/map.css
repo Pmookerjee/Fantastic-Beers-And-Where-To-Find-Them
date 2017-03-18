@@ -50,6 +50,11 @@ a{
   color: black;
   text-decoration: none;
 }
+
+#store_data {
+  font-weight: bold;
+  font-size: 18px;
+}
 label{
   text-align: center;
   color: black;

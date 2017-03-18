@@ -127,6 +127,7 @@ var controller = {
 saveStoreInfo: function(beer) {
   if(beer){
     localStorage.setItem('store', beer.store);
+    localStorage.setItem('address', beer.address);
     localStorage.setItem('lat', beer.lat);
     localStorage.setItem('long', beer.long);
   }
@@ -317,9 +318,9 @@ saveStoreInfo: function(beer) {
 
   var map = document.getElementById('map_click');
 
-  map.addEventListener('click', function(e){
-    e.preventDefault();
-    var map_page_location = location.href;
-    // document.getElementById('map_click').innerHTML = ''
-    map.removeEventListener('click', function(){});
-  })
+  // map.addEventListener('click', function(e){
+  //   e.preventDefault();
+  //   var map_page_location = location.href;
+  //   // document.getElementById('map_click').innerHTML = ''
+  //   map.removeEventListener('click', function(){});
+  // })
