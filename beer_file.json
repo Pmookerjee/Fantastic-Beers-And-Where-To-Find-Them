@@ -5,7 +5,7 @@
     "img": "",
     "type": "belgian",
     "flavor":"banana",
-    "hoppy": "no",
+    "hoppy": "yes",
     "store": "Some Store - CHANGE ME",
     "address": "Some ADDRESS - CHANGE ME",
     "lat": 21.1200499,
@@ -58,7 +58,7 @@
     "address": "2001 E Union St, Seattle, WA 98122",
     "lat": 47.612718,
     "long": -122.3079137
-  }
+  },
 
   {
     "name": "Southern Tier Tripel Cafe",
@@ -70,7 +70,7 @@
     "address": "3803 Delridge Way SW, Seattle, WA 98106",
     "lat": 47.569984,
     "long": -122.362501
-  }
+  },
 
   {
     "name": "Funky Pumpkin",
@@ -82,7 +82,7 @@
     "address": "2501 Southwest Blvd, Kansas City, MO 64108",
     "lat": 39.082097,
     "long": -94.596725
-  }
+  },
 
   {
     "name": "Gouden Carolus Hopsinjoor",
@@ -94,7 +94,7 @@
     "address": "2210 Westlake Ave, Seattle, WA 98121",
     "lat": 47.618998,
     "long": -122.338285
-  }
+  },
 
   {
     "name": "Ice Harbor Fresh",
@@ -106,7 +106,7 @@
     "address": "2300 7th Ave, Seattle, WA 98121",
     "lat": 47.617942,
     "long": -122.341899
-  }
+  },
 
   {
     "name": "Georgetown Lucille",
@@ -118,6 +118,18 @@
     "address": "4511 California Ave SW, Seattle, WA 98116",
     "lat": 47.562537,
     "long": -122.387191
+  },
+
+  {
+    "name": "Kettle Sour Orange",
+    "img": "kettle.png",
+    "type": "sour",
+    "flavor": "citrus",
+    "hoppy": "no",
+    "store": "Chuck's Hop Shop",
+    "address": "2001 E Union St, Seattle, WA 98122",
+    "lat": 47.612718,
+    "long": -122.3079137
   }
 
 ]
