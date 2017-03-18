@@ -127,6 +127,7 @@ var controller = {
 saveStoreInfo: function(beer) {
   if(beer){
     localStorage.setItem('store', beer.store);
+    localStorage.setItem('address', beer.address);
     localStorage.setItem('lat', beer.lat);
     localStorage.setItem('long', beer.long);
   }
