@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Fantastic Beers and Where to Find Them</title>
+  <link href="html/style.css" rel="stylesheet" type='text/css'>
+  <link rel="stylesheet" type="text/css" href="html/cssparallax.css">
+  <STYLE> A{text-decoration:none}</STYLE>
+</head>
+<body>
+  <div class="main">
+    <div class="wrapper">
+      <div class="ccparallaxeff">
+        <!-- PARALLAX CONTAINERS -->
+        <!-- CONTAINER ONE -->
+        <div class="parallaxOne">
+          <div class="container">
+            <h1>Fantastic Beers and Where to Find Them</h1>
+          </div>
+        </div>
+        <div class="plax content">
+          <div class="container">
+            <div class="headlines">
+              <h2>Good beers are like good friends</h2>
+              <p>(you can never have too many)</p>\
+              <br>
+            </div>
+            <div class="contentarea">
+              <h2>Why we code</h2>
+              <p>Our BeerFinder(tm) tool is going to help you find the beer you're looking for. By selecting your favorite qualities of beer (hoppiness, style, and flavoring), you'll be given a randomized beer meeting your specific palette, along with a map showing you where to find it!</p>
+            </div>
+          </div>
+        </div>
+        <!-- END CONTAINER ONE -->
+        <!-- PLACEHOLDER VIDEO -->
+        <div class="fbwft-parallaxvideo">
+          <video autoplay muted loop>
+            <source src="BREWERY1.mp4" type="video/webm">
+              <source src="BREWERY1.mp4" type="video/mp4">
+              </video>
+              <h1>The BeerFinder</h1>
+            </div>
+            <!-- END PLACEHOLDER VIDEO -->
+            <!-- CONTAINER TWO -->
+            <div class="plax content">
+              <div class="container">
+                <div class="contentarea">
+                  <br>
+                  <section class="slot_machine">
+                    <fieldset id="slot1">
+                      <p id="p_type" class="category_header">Select a type</p>
+                      <form id="type">
+
+                        <br>
+                        <select name="type" size="5">
+                          <option value="ale">Ale</option>
+                          <option value="ipa">IPA</option>
+                          <option value="stout">Stout</option>
+                          <option value="belgian">Belgian</option>
+                          <option value="sour">Sour</option>
+                        </select>
+                      </form>
+                    </fieldset>
+                    <fieldset id="slot2">
+                      <p id="p_flavor" class="category_header">Select a flavor</p>
+                      <form id="flavor">
+
+                        <br>
+                        <select name="flavor" size="6">
+                          <option value="banana">Banana</option>
+                          <option value="coffee">Coffee</option>
+                          <option value="chocolate">Chocolate</option>
+                          <option value="pumpkin">Pumpkin</option>
+                          <option value="citrus">Citrus</option>
+                          <option value="berry">Berry</option>
+                        </select>
+                      </form>
+                    </fieldset>
+                    <fieldset id="slot3">
+                      <p id="p_hoppy" class="category_header">Hoppy?</p>
+                      <form id="hoppy">
+
+                        <br>
+                        <select name="hoppy" size="2">
+                          <option value="yes">Yes</option>
+                          <option value="no">No</option>
+                        </select>
+
+                      </form>
+                    </fieldset>
+                  </section>
+                  <fieldset class="submit_button">
+                    <div id='button_holder'>
+                      <input type="submit" value="" id="beer_button">
+                      <input type="submit" value="Try Again?" id="playAgain_button">
+                    </div>
+                  </fieldset>
+
+                  <div>
+                    <img src="" id="result">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- END CONTAINER TWO -->
+            <!-- CONTAINER THREE -->
+            <div class="parallaxTwo">
+              <div class="container">
+
+                <h1><a id="map_link" class="links" href="html/map.html">MAP IT</a></h1>
+
+              </div>
+            </div>
+            <div class="plax content">
+              <div class="container">
+                <div class="headlines">
+
+                  <h2><a class="links" href="html/about.html">ABOUT US</a></h2>
+                </div>
+              </div>
+            </div>
+            <!-- END CONTAINER THREE -->
+            <!-- CONTAINER FOUR -->
+            <div class="parallaxThree">
+              <div class="container">
+                <h1>Thank you for visiting our page!</h1>
+              </div>
+            </div>
+            <div class="plax content">
+              <div class="container">
+                <div class="headlines">
+                  <h2>Zum Whol!</h2>
+                  <p>(to your health!)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END OF CONTAINER FOUR -->
+          <!-- END OF PARALLAX VIEW -->
+        </div>
+      </div>
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script type="text/javascript" charset="utf-8">
+      </script>
+      <script type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript" src="app.js"></script>
+      <script src="jquery.glow.js" type="text/javascript"></script>
+
+    </body>
+    <!--Added plugin to make final image result 'glow': https://github.com/MisterDr/JQuery-Glow, jquery.glow.js -->
+    <!--Css animation style borrowed from https://cssanimation.rocks/list-items/-->
+    </html>

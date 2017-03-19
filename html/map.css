@@ -1,0 +1,134 @@
+html{
+  text-align: center;
+  background-color: ivory;
+  display: block;
+}
+h1{
+  font-family: "PT Sans",sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  letter-spacing: 6px;
+}
+p{
+  text-decoration-style: solid;
+  text-align: center;
+}
+body{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+head{
+  text-align: center;
+}
+legend{
+  text-align: center;
+  text-decoration-style: solid;
+  font-size: 30px;
+}
+table{
+  text-align: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: flex-start;
+}
+tr{
+  text-align: center;
+  left: auto;
+}
+form{
+  align-items: center;
+}
+a{
+  text-align: center;
+  font-style: bold;
+  color: black;
+  text-decoration: none;
+}
+
+#store_data {
+  font-weight: bold;
+  font-size: 18px;
+}
+label{
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.stackLabel {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
+input, label {
+  float: none;
+}
+fieldset {
+  background-position: center;
+  text-align: center;
+  width: 950px;
+  margin: 0 auto;
+}
+ul{
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+}
+
+#link-bar{
+  padding: .5em;
+  display: flex;
+  flex-direction: row;
+  position:fixed;
+  right: 0;
+  top: 0%;
+  background-color: white;
+  color: black;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: ivory;
+}
+.footer{
+  text-align: center;
+  text-decoration-style: solid;
+  padding: 30px;
+}
+#map{
+  height: 100%;
+}
+html, body{
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  max-width: 90%;
+  max-height: 90%;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#floating-panel{
+  text-align: center;
+  text-decoration-style: solid;
+  padding: 10px;
+  font-style: italic;
+
+}
+#select{
+  font-size: 50px;
+}
+/*
+div id= "two"{
+max-width: 0;
+max-height: 0;
+text-align: center;
+}*/

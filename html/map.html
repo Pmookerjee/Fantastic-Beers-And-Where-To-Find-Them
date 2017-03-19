@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="map.css" rel="stylesheet"/>
+  <link href= "http://www.webpage.com"/>
+
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Directions service</title>
+</head>
+<style>
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+</style>
+</head>
+<header><h1><a href="../index.html">FANTASTIC &nbsp; BEERS &nbsp; AND &nbsp; WHERE &nbsp; TO &nbsp; FIND &nbsp; THEM</a></h1></header>
+<section id= "link-bar">
+  <a href= "https://www.facebook.com/brian.namgung" target= "blank"><img class= "link-bar" src= "../assets/fb.png" alt= ""></a>
+  <a href= "https://twitter.com/namgungssi" target="blank"><img class= "link-bar" src= "../assets//twitter.png" alt=""></a>
+  <a href= "https://www.instagram.com/namgungdalhun/" target= "blank"><img class= "link-bar" src= "../assets/instagram.png" alt=""></a>
+</section>
+<fieldset>
+  <legend>L O C A T I O N</legend>
+  <form>
+    <table width= "500" cellpadding= "10" cellspacing= "5">
+      <tr>
+        <label id="store_data" class="stackLabel"></label>
+        <label id="address_data" class="stackLabel"></label>
+      </tr>
+    </table>
+  </form>
+</fieldset>
+</br>
+</br>
+<body>
+  <div id="floating-panel">
+    <b>S T A R T : </b>
+    <select id="start">
+      <option value="Seattle, WA">Code Fellows</option>
+    </select>
+    <b>E N D : </b>
+    <select id="end">
+      <option value="select location">Select Location</option>
+      <option value="7517 Aurora Ave N, Seattle, WA 98103">Fin Du Monde (Banana) @ Uber Tavern</option>
+      <option value="2219 Douglas Avenue Bellingham, WA 98225">Rougue Double Choclate Stout (Chocolate) @ JJ's In & Out</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Raspberry Sour Avery Brewing (Berry) @ Chuck's Hop Shop</option>
+      <option value="1221 E Pike St, Seattle, WA 98122">Punkuccino (Coffee) @ Elysian Brewing</option>
+      <option value="1221 E Pike St, Seattle, WA 98122">Pubkuccino (Pumpkin) @ Elysian Brewing</option>
+      <option value="3803 Delridge Way SW, Seattle, WA 98106">Triple Cafe (Coffee) @ Skylark Cafe</option>
+      <option value="2501 Southwest Blvd, Kansas City, MO 64108">Funky Pumpkin (Pumpkin) @ Boulevard Brewing Co.</option>
+      <option value="2210 Westlake Ave, Seattle, WA 98121">Gouden Carolus Hopsinjoor (Citrus) @ Whole Foods Market</option>
+      <option value="2300 7th Ave, Seattle, WA 98121">Ice Harbor Fresh (Cirtus) @ Downtown Spirits</option>
+      <option value="4511 California Ave SW, Seattle, WA 98116">Georgetown Lucille (Banana) @ The Beer Junction</option>
+      <option value="2210 Westlake Ave, Seattle, WA 98121">Banana Bread Beer (Banana) @ Whole Foods Market</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Heritage Coffee Brown (Coffee) @ Chuck's Hop Shop</option>
+      <option value="2108 NE 65th St, Seattle, WA 98105">Shrouded Summit (Berry) @ Zeek's</option>
+      <option value="2001 E Union St, Seattle, WA 98122">Framboise (Berry) @ Chuck's Hop Shop</option>
+      <option value="1415 1st Avenue, Seattle WA 98101">Pike Dobble Hopulus (stone fruits, pine & melon) @ Pike Brewing</option>
+    </select>
+  </div>
+  <div id="map"></div>
+  <script>
+
+
+  function initMap() {
+    var saved_lat= parseFloat(localStorage.getItem('lat'));
+    var saved_long=parseFloat(localStorage.getItem('long'));
+
+    var uluru = {lat: saved_lat, lng: saved_long};
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+  </script>
+  <script async defer src= "http://maps.googleapis.com/maps/api/js?key=AIzaSyBjYlQzn2-ooH7wuWXDtIYDUvDl9105cqM&callback=initMap"></script>
+</script>
+<script>
+
+var saved_store=localStorage.getItem('store');
+var saved_address=localStorage.getItem('address');
+var store_label = document.getElementById('store_data');
+store_label.innerHTML = saved_store;
+var address_label = document.getElementById('address_data');
+address_label.innerHTML = saved_address;
+
+
+</script>
+</br>
+</br>
+<footer>C O D E &nbsp; 2 0 1 &nbsp; F I N A L &nbsp; P R O J E C T</footer>
+<footer><a href= "https://www.codefellows.org/"</a>J O I N &nbsp; U S &nbsp; T O D A Y </footer>
+</br>
+</br>
+</body>
+</html>

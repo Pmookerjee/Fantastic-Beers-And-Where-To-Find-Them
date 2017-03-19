@@ -1,0 +1,114 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.parallaxOne {
+  background-image: url("IndexImages/beertaps.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.parallaxTwo {
+  background-image: url("IndexImages/beerflight.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.parallaxThree {
+  background-image: url("IndexImages/beertanks.jpeg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.plax:last-child {
+  margin-bottom: 0;
+}
+
+.content {
+  background: none repeat scroll 0 0 black;
+  padding: 42px 0;
+}
+
+.fbwft-parallaxvideo {
+  height: 175px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.fbwft-parallaxvideo video{
+  min-width: 100%;
+  position: fixed;
+  top:0;
+  z-index: -100;
+}
+
+.fbwft-parallaxvideo h1 {
+  color: #fff;
+  font-size: 76px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #fff;
+  font-family: "PT Sans",sans-serif;
+  font-size: 32px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+h1 {
+  font-family: "PT Sans",sans-serif;
+  font-weight: 700;
+  font-size: 76px;
+  text-align: center;
+  text-transform: uppercase;
+  color:#FFF;
+  margin: 0;
+  text-shadow: 2px 2px black;
+}
+
+a {
+  color: inherit;
+}
+
+.boxhead a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+p {
+  font-family: "PT Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  color:#f6f3f3;
+  text-align: center;
+}
+
+.contentarea p {
+  font-family: "PT Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  color:#f6f3f3;
+  text-align: left;
+  padding-top: 18px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
