@@ -121,17 +121,17 @@ var controller = {
       var newButton = document.getElementById('playAgain_button');
       newButton.style.visibility = 'visible';
       newButton.classList.add('showPlayAgainButton');
-  })
-},
+    })
+  },
 
-saveStoreInfo: function(beer) {
-  if(beer){
-    localStorage.setItem('store', beer.store);
-    localStorage.setItem('address', beer.address);
-    localStorage.setItem('lat', beer.lat);
-    localStorage.setItem('long', beer.long);
-  }
-},
+  saveStoreInfo: function(beer) {
+    if(beer){
+      localStorage.setItem('store', beer.store);
+      localStorage.setItem('address', beer.address);
+      localStorage.setItem('lat', beer.lat);
+      localStorage.setItem('long', beer.long);
+    }
+  },
 
   getPossibleOptions: function() {
 
@@ -236,8 +236,8 @@ saveStoreInfo: function(beer) {
                 slot2_p.innerHTML = "You struck out!";
                 slot2_p.classList.add('blink');
 
-              // If match, display beer photo and name
-              //
+                // If match, display beer photo and name
+                //
               } else {
                 var imgPath = 'assets/' + chosenBeer.img;
                 var imgId   = 'beer_result_img';
@@ -269,58 +269,51 @@ saveStoreInfo: function(beer) {
   },
 }
 
-  var type = document.getElementById('type');
+var type = document.getElementById('type');
 
-  type.addEventListener('click', function(e) {
-    controller.userType = e.target.value;
-    controller.userTypePic = 'assets/' + controller.userType + '.png';
-    controller.inputCount++;
-    controller.drawBeerType();
-    controller.checkCount();
-  })
+type.addEventListener('click', function(e) {
+  controller.userType = e.target.value;
+  controller.userTypePic = 'assets/' + controller.userType + '.png';
+  controller.inputCount++;
+  controller.drawBeerType();
+  controller.checkCount();
+})
 
-  var flavor = document.getElementById('flavor');
+var flavor = document.getElementById('flavor');
 
-  flavor.addEventListener('click', function(e) {
-    controller.userFlavor = e.target.value;
-    controller.userFlavorPic = 'assets/' + controller.userFlavor + '.png';
-    controller.inputCount++;
-    controller.drawBeerFlavor();
-    controller.checkCount();
-  })
+flavor.addEventListener('click', function(e) {
+  controller.userFlavor = e.target.value;
+  controller.userFlavorPic = 'assets/' + controller.userFlavor + '.png';
+  controller.inputCount++;
+  controller.drawBeerFlavor();
+  controller.checkCount();
+})
 
-  var hoppy = document.getElementById('hoppy');
+var hoppy = document.getElementById('hoppy');
 
-  hoppy.addEventListener('click', function(e) {
-    controller.userHoppy = e.target.value;
-    controller.userHoppyPic = 'assets/' + controller.userHoppy + '.png';
-    controller.inputCount++;
-    controller.drawBeerHoppy();
-    controller.checkCount();
-  })
+hoppy.addEventListener('click', function(e) {
+  controller.userHoppy = e.target.value;
+  controller.userHoppyPic = 'assets/' + controller.userHoppy + '.png';
+  controller.inputCount++;
+  controller.drawBeerHoppy();
+  controller.checkCount();
+})
 
-  var submit = document.getElementById('beer_button');
+var submit = document.getElementById('beer_button');
 
-  submit.addEventListener('click', function(e){
-    e.preventDefault();
-    controller.helper();
-    type.removeEventListener('click', function(){});
-    flavor.removeEventListener('click', function(){});
-    hoppy.removeEventListener('click', function(){});
-  })
+submit.addEventListener('click', function(e){
+  e.preventDefault();
+  controller.helper();
+  type.removeEventListener('click', function(){});
+  flavor.removeEventListener('click', function(){});
+  hoppy.removeEventListener('click', function(){});
+})
 
-  var reset = document.getElementById('playAgain_button');
+var reset = document.getElementById('playAgain_button');
 
-  reset.addEventListener('click', function(){
-       location.reload(false);
-       reset.removeEventListener('click', function(){});
-  }, false);
+reset.addEventListener('click', function(){
+  location.reload(false);
+  reset.removeEventListener('click', function(){});
+}, false);
 
-  var map = document.getElementById('map_click');
-
-  // map.addEventListener('click', function(e){
-  //   e.preventDefault();
-  //   var map_page_location = location.href;
-  //   // document.getElementById('map_click').innerHTML = ''
-  //   map.removeEventListener('click', function(){});
-  // })
+var map = document.getElementById('map_click');

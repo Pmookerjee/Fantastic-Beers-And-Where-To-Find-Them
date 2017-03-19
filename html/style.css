@@ -81,7 +81,7 @@ option:focus {
 li {
   display: flex;
   justify-content: space-around;
-   /*text-align: center;*/
+  /*text-align: center;*/
 }
 
 .submit_button {
@@ -142,8 +142,8 @@ li {
 }
 
 /*.category_header {
-  display: flex;
-  justify-content: center;
+display: flex;
+justify-content: center;
 }*/
 
 fieldset {
